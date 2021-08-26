@@ -1367,10 +1367,10 @@ if ($mode === 'add') {
 } elseif ($mode == 'add_collection' || $mode == 'update_collection'){
     
     $collection_id = !empty($_REQUEST['collection_id']) ? $_REQUEST['collection_id'] : 0;
-    $collection_data = fn_get_collection_data($_REQUEST['collection_id'], DESCR_SL);
-    fn_print_die($collection_data);
+    $collection_data = fn_get_collection_data($collection_id, DESCR_SL);
+    // fn_print_die($collection_data);
 
-    if (empty($product_data) && $mode == 'update') {
+    if (empty($collection_data) && $mode == 'update') {
         return [CONTROLLER_STATUS_NO_PAGE];
     }
     Tygh::$app['view']->assign('collection_data', $collection_data);
@@ -1385,12 +1385,12 @@ if ($mode === 'add') {
 
 function fn_get_collection_data($collection_id = 0, $lang_code = CART_LANGUAGE)
 {
-    $collection = [];
+    // $collection = [];
     if(!empty($collection_id)){
         list($collections) = fn_get_collections([
             'collection_id' => $collection_id
         ], 1, $lang_code);
-        $collection=!empty($collections) ? reset($collection) : [];
+        $collection=!empty($collections) ? reset($collections) : [];
 
     }
     return $collection;

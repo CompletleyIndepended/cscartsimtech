@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2021-08-26 18:44:26
+<?php /* Smarty version Smarty-3.1.21, created on 2021-08-26 21:00:11
          compiled from "C:\OpenServer\domains\cscart\design\backend\templates\menu.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:5043133696127b6da02b6d4-49378112%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:12154497646127d6ab38cd87-06359652%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'tygh',
     ),
   ),
-  'nocache_hash' => '5043133696127b6da02b6d4-49378112',
+  'nocache_hash' => '12154497646127d6ab38cd87-06359652',
   'function' => 
   array (
     'menu_attrs' => 
@@ -59,9 +59,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => 0,
   'version' => 'Smarty-3.1.21',
-  'unifunc' => 'content_6127b6da1ac9b9_93763706',
+  'unifunc' => 'content_6127d6ab5235e4_47966402',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_6127b6da1ac9b9_93763706')) {function content_6127b6da1ac9b9_93763706($_smarty_tpl) {?><?php if (!is_callable('smarty_block_hook')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.hook.php';
+<?php if ($_valid && !is_callable('content_6127d6ab5235e4_47966402')) {function content_6127d6ab5235e4_47966402($_smarty_tpl) {?><?php if (!is_callable('smarty_block_hook')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.hook.php';
 if (!is_callable('smarty_modifier_enum')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\modifier.enum.php';
 if (!is_callable('smarty_modifier_truncate')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\modifier.truncate.php';
 if (!is_callable('smarty_modifier_sizeof')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\modifier.sizeof.php';

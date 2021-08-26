@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2021-08-26 18:44:21
+<?php /* Smarty version Smarty-3.1.21, created on 2021-08-26 21:00:08
          compiled from "C:\OpenServer\domains\cscart\design\backend\templates\views\products\manage_collections.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:14995508616127b6d56d7de1-90671784%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:13481262306127d6a869bb29-37782335%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'c75b32757f6ff4e1be6a9556775a4fb038c21860' => 
     array (
       0 => 'C:\\OpenServer\\domains\\cscart\\design\\backend\\templates\\views\\products\\manage_collections.tpl',
-      1 => 1629910045,
+      1 => 1629993409,
       2 => 'tygh',
     ),
   ),
-  'nocache_hash' => '14995508616127b6d56d7de1-90671784',
+  'nocache_hash' => '13481262306127d6a869bb29-37782335',
   'function' => 
   array (
   ),
@@ -34,9 +34,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21',
-  'unifunc' => 'content_6127b6d57614c8_61276899',
+  'unifunc' => 'content_6127d6a86f5144_00779731',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_6127b6d57614c8_61276899')) {function content_6127b6d57614c8_61276899($_smarty_tpl) {?><?php if (!is_callable('smarty_block_hook')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.hook.php';
+<?php if ($_valid && !is_callable('content_6127d6a86f5144_00779731')) {function content_6127d6a86f5144_00779731($_smarty_tpl) {?><?php if (!is_callable('smarty_block_hook')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.hook.php';
 ?><?php
 \Tygh\Languages\Helper::preloadLangVars(array('position','name','status','edit','delete','status','no_data'));
 ?>
@@ -124,7 +124,7 @@ $_smarty_tpl->tpl_vars['collection']->_loop = true;
                         <td>
                             <input type="text" name="collections_data[<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['collection']->value['collection_id'], ENT_QUOTES, 'UTF-8');?>
 ][position]" value="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['collection']->value['position'], ENT_QUOTES, 'UTF-8');?>
-" size="3" class="input-micro input-hidden">
+" size="3" class="input-micro">
                         </td>
                     
                         <td class="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['no_hide_input']->value, ENT_QUOTES, 'UTF-8');?>
@@ -139,7 +139,7 @@ $_smarty_tpl->tpl_vars['collection']->_loop = true;
                                 <li><?php smarty_template_function_btn($_smarty_tpl,array('type'=>"list",'text'=>$_smarty_tpl->__("edit"),'href'=>"products.update_collection?banner_id=".((string)$_smarty_tpl->tpl_vars['collection']->value['collection_id'])));?>
 </li>
                             <?php if ($_smarty_tpl->tpl_vars['allow_save']->value) {?>
-                                <li><?php smarty_template_function_btn($_smarty_tpl,array('type'=>"list",'class'=>"cm-confirm",'text'=>$_smarty_tpl->__("delete"),'href'=>"products.delete_collection?banner_id=".((string)$_smarty_tpl->tpl_vars['collection']->value['collection_id']),'method'=>"POST"));?>
+                                <li><?php smarty_template_function_btn($_smarty_tpl,array('type'=>"list",'class'=>"cm-confirm",'text'=>$_smarty_tpl->__("delete"),'href'=>"products.collection_delete?banner_id=".((string)$_smarty_tpl->tpl_vars['collection']->value['collection_id']),'method'=>"POST"));?>
 </li>
                             <?php }?>
                             <?php list($_capture_buffer, $_capture_assign, $_capture_append) = array_pop($_smarty_tpl->_capture_stack[0]);
@@ -179,9 +179,9 @@ if (!empty($_capture_buffer)) {
         <?php $_smarty_tpl->_capture_stack[0][] = array("buttons", null, null); ob_start(); ?>
             <?php $_smarty_tpl->_capture_stack[0][] = array("tools_list", null, null); ob_start(); ?>
                 <?php if ($_smarty_tpl->tpl_vars['collections']->value) {?>
-                    <li><?php smarty_template_function_btn($_smarty_tpl,array('type'=>"delete_selected",'dispatch'=>"dispatch[products.delete_collections]",'form'=>"collections_form"));?>
+                    <li><?php smarty_template_function_btn($_smarty_tpl,array('type'=>"delete_selected",'dispatch'=>"dispatch[products.collections_delete]",'form'=>"collections_form"));?>
 </li>
-                    <?php echo $_smarty_tpl->getSubTemplate ("buttons/save.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('but_name'=>"dispatch[products.update_collections]",'but_role'=>"action",'but_target_form'=>"collections_form",'but_meta'=>"cm-submit"), 0);?>
+                    <?php echo $_smarty_tpl->getSubTemplate ("buttons/save.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('but_name'=>"dispatch[products.collections_update]",'but_role'=>"action",'but_target_form'=>"collections_form",'but_meta'=>"cm-submit"), 0);?>
 
                 <?php }?>
             <?php list($_capture_buffer, $_capture_assign, $_capture_append) = array_pop($_smarty_tpl->_capture_stack[0]);
@@ -200,7 +200,7 @@ if (!empty($_capture_buffer)) {
 } else $_smarty_tpl->capture_error();?>
 
         <?php $_smarty_tpl->_capture_stack[0][] = array("adv_buttons", null, null); ob_start(); ?>
-            <?php echo $_smarty_tpl->getSubTemplate ("common/tools.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('tool_href'=>"collections.add",'prefix'=>"top",'hide_tools'=>"true",'title'=>"Добавить коллекцию",'icon'=>"icon-plus"), 0);?>
+            <?php echo $_smarty_tpl->getSubTemplate ("common/tools.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('tool_href'=>"products.add_collection",'prefix'=>"top",'hide_tools'=>"true",'title'=>"Добавить коллекцию",'icon'=>"icon-plus"), 0);?>
 
         <?php list($_capture_buffer, $_capture_assign, $_capture_append) = array_pop($_smarty_tpl->_capture_stack[0]);
 if (!empty($_capture_buffer)) {

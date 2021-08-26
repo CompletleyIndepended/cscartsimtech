@@ -55,10 +55,21 @@
             {include file="common/select_status.tpl" input_name="collection_data[status]" id="elm_banner_status" obj_id=$id obj=$collection_data hidden=false}
         <!--content_general--></div>
 
-        <div id="content_addons" class="hidden clearfix">
-            {hook name="banners:detailed_content"}
+        {capture name="tools_list"}
+            {hook name="products:update_tools_list"}
+                {if $view_uri}
+                    <li>{btn type="list" target="_blank" text=__("preview") href=$view_uri}</li>
+                    <li class="divider"></li>
+                {/if}
+                {if $allow_clone}
+                    <li>{btn type="list" text=__("clone") href="products.clone?product_id=`$id`" method="POST"}</li>
+                {/if}
+                {if $allow_save}
+                    <li>{btn type="list" text=__("delete") class="cm-confirm" href="products.delete?product_id=`$id`" method="POST"}</li>
+                {/if}
             {/hook}
-        <!--content_addons--></div>
+        {/capture}
+        {dropdown content=$smarty.capture.tools_list}
 
     {capture name="buttons"}
         {if !$id}
