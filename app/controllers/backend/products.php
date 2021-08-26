@@ -56,6 +56,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'product_file'
     );
 
+    if ($mode == "update_collection") {
+        fn_print_die($_REQUEST);
+    } elseif ($mode == "update_collections") {
+        fn_print_die($_REQUEST);
+    } elseif ($mode == "delete_collection") {
+        fn_print_die($_REQUEST);
+    } elseif ($mode == "delete_collections") {
+        fn_print_die($_REQUEST);
+    }
+
 
     // Apply Global Option
     if ($mode === 'apply_global_option') {

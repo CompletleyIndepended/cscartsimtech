@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2021-08-26 21:00:11
+<?php /* Smarty version Smarty-3.1.21, created on 2021-08-26 21:29:23
          compiled from "C:\OpenServer\domains\cscart\design\backend\templates\addons\help_center\hooks\index\content_top.pre.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:18508214256127d6ab2c3488-99284231%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:10495243616127dd83dd0435-92278021%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,15 +11,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'tygh',
     ),
   ),
-  'nocache_hash' => '18508214256127d6ab2c3488-99284231',
+  'nocache_hash' => '10495243616127dd83dd0435-92278021',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21',
-  'unifunc' => 'content_6127d6ab2d6f32_43414143',
+  'unifunc' => 'content_6127dd83ddbcd5_18163284',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_6127d6ab2d6f32_43414143')) {function content_6127d6ab2d6f32_43414143($_smarty_tpl) {?><?php
+<?php if ($_valid && !is_callable('content_6127dd83ddbcd5_18163284')) {function content_6127dd83ddbcd5_18163284($_smarty_tpl) {?><?php
 \Tygh\Languages\Helper::preloadLangVars(array('help_center.help'));
 ?>
 <?php if ((defined('ACCOUNT_TYPE') ? constant('ACCOUNT_TYPE') : null)==="admin") {?>

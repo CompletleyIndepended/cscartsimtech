@@ -38,7 +38,7 @@
                 </div>
             </div>
 
-            <div class="control-group {if $b_type == "G"}hidden{/if}" id="banner_text">
+            <div class="control-group" id="banner_text">
                 <label class="control-label" for="elm_banner_description">{__("description")}:</label>
                 <div class="controls">
                     <textarea id="elm_banner_description" name="collection_data[description]" cols="35" rows="8" class="cm-wysiwyg input-large">{$collection_data.description}</textarea>
@@ -54,28 +54,18 @@
 
             {include file="common/select_status.tpl" input_name="collection_data[status]" id="elm_banner_status" obj_id=$id obj=$collection_data hidden=false}
         <!--content_general--></div>
-
+    {if !$id}
         {capture name="tools_list"}
-            {hook name="products:update_tools_list"}
-                {if $view_uri}
-                    <li>{btn type="list" target="_blank" text=__("preview") href=$view_uri}</li>
-                    <li class="divider"></li>
-                {/if}
-                {if $allow_clone}
-                    <li>{btn type="list" text=__("clone") href="products.clone?product_id=`$id`" method="POST"}</li>
-                {/if}
-                {if $allow_save}
-                    <li>{btn type="list" text=__("delete") class="cm-confirm" href="products.delete?product_id=`$id`" method="POST"}</li>
-                {/if}
-            {/hook}
+            <li>{btn type="list" text=__("delete") class="cm-confirm" href="products.delete_collection?product_id=`$id`" method="POST"}</li>
         {/capture}
         {dropdown content=$smarty.capture.tools_list}
+    {/if}
 
     {capture name="buttons"}
         {if !$id}
-            {include file="buttons/save_cancel.tpl" but_role="submit-link" but_target_form="banners_form" but_name="dispatch[banners.update]"}
+            {include file="buttons/save_cancel.tpl" but_role="submit-link" but_target_form="banners_form" but_name="dispatch[products.update_collection]"}
         {else}
-            {include file="buttons/save_cancel.tpl" but_name="dispatch[banners.update]" but_role="submit-link" but_target_form="banners_form" hide_first_button=$hide_first_button hide_second_button=$hide_second_button save=$id}
+            {include file="buttons/save_cancel.tpl" but_name="dispatch[products.update_collection]" but_role="submit-link" but_target_form="banners_form" hide_first_button=$hide_first_button hide_second_button=$hide_second_button save=$id}
         {/if}
     {/capture}
 
