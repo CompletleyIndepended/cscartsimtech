@@ -54,23 +54,21 @@
 
             {include file="common/select_status.tpl" input_name="collection_data[status]" id="elm_banner_status" obj_id=$id obj=$collection_data hidden=false}
         <!--content_general--></div>
-    
-    {* Delete function *}
-    
-    {if $id}
-        {capture name="tools_list"}
-            <li>{btn type="list" text=__("delete") class="cm-confirm" href="products.delete_collection?collection_id=`$id`" method="POST"}</li>
-        {/capture}
-        {dropdown content=$smarty.capture.tools_list}
-    {/if}
 
     {* Save function *}
 
     {capture name="buttons"}
         {if !$id}
-            {include file="buttons/save_cancel.tpl" but_role="save" but_target_form="banners_form" but_name="dispatch[products.update_collection]"}
+            {include file="buttons/save_cancel.tpl" but_role="submit-link" but_target_form="banners_form" but_name="dispatch[products.update_collection]"}
         {else}
             {include file="buttons/save_cancel.tpl" but_name="dispatch[products.update_collection]" but_role="submit-link" but_target_form="banners_form" hide_first_button=$hide_first_button hide_second_button=$hide_second_button save=$id}
+
+            {* Delete function *}
+
+            {capture name="tools_list"}
+                <li>{btn type="list" text=__("delete") class="cm-confirm" href="products.delete_collection?collection_id=`$id`" method="POST"}</li>
+            {/capture}
+            {dropdown content=$smarty.capture.tools_list}
         {/if}
     {/capture}
 

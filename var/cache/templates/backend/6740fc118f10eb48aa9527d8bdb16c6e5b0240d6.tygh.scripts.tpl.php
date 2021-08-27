@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2021-08-27 15:01:23
+<?php /* Smarty version Smarty-3.1.21, created on 2021-08-27 19:16:28
          compiled from "C:\OpenServer\domains\cscart\design\backend\templates\common\scripts.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:8067944486128d4135eaff2-67690062%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:12504216061290fdc7a86a8-50270119%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'tygh',
     ),
   ),
-  'nocache_hash' => '8067944486128d4135eaff2-67690062',
+  'nocache_hash' => '12504216061290fdc7a86a8-50270119',
   'function' => 
   array (
   ),
@@ -35,9 +35,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21',
-  'unifunc' => 'content_6128d41370abb2_23643994',
+  'unifunc' => 'content_61290fdc8a78c3_29552372',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_6128d41370abb2_23643994')) {function content_6128d41370abb2_23643994($_smarty_tpl) {?><?php if (!is_callable('smarty_block_scripts')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.scripts.php';
+<?php if ($_valid && !is_callable('content_61290fdc8a78c3_29552372')) {function content_61290fdc8a78c3_29552372($_smarty_tpl) {?><?php if (!is_callable('smarty_block_scripts')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.scripts.php';
 if (!is_callable('smarty_function_script')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\function.script.php';
 if (!is_callable('smarty_block_inline_script')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.inline_script.php';
 if (!is_callable('smarty_block_hook')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.hook.php';

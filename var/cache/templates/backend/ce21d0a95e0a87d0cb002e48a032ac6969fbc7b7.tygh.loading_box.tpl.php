@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2021-08-27 15:01:14
+<?php /* Smarty version Smarty-3.1.21, created on 2021-08-27 19:16:27
          compiled from "C:\OpenServer\domains\cscart\design\backend\templates\common\loading_box.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:11174878806128d40a36e8e3-09040010%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:9929484361290fdbc13f26-83096927%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,14 +11,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'tygh',
     ),
   ),
-  'nocache_hash' => '11174878806128d40a36e8e3-09040010',
+  'nocache_hash' => '9929484361290fdbc13f26-83096927',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21',
-  'unifunc' => 'content_6128d40a370d26_15275971',
+  'unifunc' => 'content_61290fdbc15d46_20981611',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_6128d40a370d26_15275971')) {function content_6128d40a370d26_15275971($_smarty_tpl) {?><div id="ajax_overlay" class="ajax-overlay"></div>
+<?php if ($_valid && !is_callable('content_61290fdbc15d46_20981611')) {function content_61290fdbc15d46_20981611($_smarty_tpl) {?><div id="ajax_overlay" class="ajax-overlay"></div>
 <div id="ajax_loading_box" class="hidden ajax-loading-box"></div>
 <?php }} ?>
