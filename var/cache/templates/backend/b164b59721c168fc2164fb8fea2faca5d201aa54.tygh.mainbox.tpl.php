@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2021-08-27 12:35:05
+<?php /* Smarty version Smarty-3.1.21, created on 2021-08-27 15:01:18
          compiled from "C:\OpenServer\domains\cscart\design\backend\templates\common\mainbox.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:15149337926128b1c94ce6a2-74161612%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:11809806926128d40ec66514-43213896%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'tygh',
     ),
   ),
-  'nocache_hash' => '15149337926128b1c94ce6a2-74161612',
+  'nocache_hash' => '11809806926128d40ec66514-43213896',
   'function' => 
   array (
   ),
@@ -59,9 +59,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21',
-  'unifunc' => 'content_6128b1c95b42c1_62488187',
+  'unifunc' => 'content_6128d40ed77084_13605056',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_6128b1c95b42c1_62488187')) {function content_6128b1c95b42c1_62488187($_smarty_tpl) {?><?php if (!is_callable('smarty_block_inline_script')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.inline_script.php';
+<?php if ($_valid && !is_callable('content_6128d40ed77084_13605056')) {function content_6128d40ed77084_13605056($_smarty_tpl) {?><?php if (!is_callable('smarty_block_inline_script')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.inline_script.php';
 if (!is_callable('smarty_block_hook')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.hook.php';
 if (!is_callable('smarty_block_notes')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.notes.php';
 if (!is_callable('smarty_modifier_sanitize_html')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\modifier.sanitize_html.php';

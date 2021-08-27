@@ -23,6 +23,7 @@ use Tygh\Enum\YesNo;
 use Tygh\Http;
 use Tygh\Registry;
 use Tygh\Tools\Url;
+use Tygh\Languages\Languages;
 
 defined('BOOTSTRAP') or die('Access denied');
 
@@ -56,13 +57,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'product_file'
     );
 
-    if ($mode == "update_collection") {
-        fn_print_die($_REQUEST);
-    } elseif ($mode == "update_collections") {
-        fn_print_die($_REQUEST);
-    } elseif ($mode == "delete_collection") {
-        fn_print_die($_REQUEST);
-    } elseif ($mode == "delete_collections") {
+    if ($mode === 'update_collection') {
+        $collection_id = !empty($_REQUEST['collection_id']) ? $_REQUEST['collection_id'] : 0;
+        $data = !empty($_REQUEST['collection_data']) ? $_REQUEST['collection_data'] : [];
+        $collection_id = fn_update_collection($data, $collection_id);
+        if (!empty($collection_id)) {
+            $suffix = ".update_collection?collection_id={$collection_id}";
+        } else {
+            $suffix = ".add_collection";
+        }
+    } elseif ($mode === 'update_collections') {
+        // fn_print_die($_REQUEST);
+    } elseif ($mode === 'delete_collection') {
+        // fn_print_die($_REQUEST);
+    } elseif ($mode === 'delete_collections') {
         fn_print_die($_REQUEST);
     }
 
@@ -1374,28 +1382,24 @@ if ($mode === 'add') {
         CONTROLLER_STATUS_OK,
         'exim.export?section=products&pattern_id=' . Tygh::$app['session']['export_ranges']['products']['pattern_id'],
     ];
-} elseif ($mode == 'add_collection' || $mode == 'update_collection'){
+} elseif ($mode === 'add_collection' || $mode === 'update_collection'){
     
     $collection_id = !empty($_REQUEST['collection_id']) ? $_REQUEST['collection_id'] : 0;
     $collection_data = fn_get_collection_data($collection_id, DESCR_SL);
-    // fn_print_die($collection_data);
 
-    if (empty($collection_data) && $mode == 'update') {
+    if (empty($collection_data) && $mode === 'update') {
         return [CONTROLLER_STATUS_NO_PAGE];
     }
     Tygh::$app['view']->assign('collection_data', $collection_data);
-    // fn_print_die('end');
-} elseif ($mode == 'manage_collections'){
-    // fn_print_die('end');
+} elseif ($mode === 'manage_collections'){
     list($collections, $search) = fn_get_collections($_REQUEST, Registry::get('settings.Appearance.admin_elements_per_page'), DESCR_SL);
-    // fn_print_die($collections);
     Tygh::$app['view']->assign('collections', $collections);
     Tygh::$app['view']->assign('search', $search);
 }
 
 function fn_get_collection_data($collection_id = 0, $lang_code = CART_LANGUAGE)
 {
-    // $collection = [];
+    $collection = [];
     if(!empty($collection_id)){
         list($collections) = fn_get_collections([
             'collection_id' => $collection_id
@@ -1477,4 +1481,25 @@ function fn_get_collections($params = [], $items_per_page = 0, $lang_code = CART
 
     return array($collections, $params);
 
+}
+
+function fn_update_collection($data, $collection_id, $lang_code = DESCR_SL)
+{
+    if (isset($data['timestamp'])) {
+        $data['timestamp'] = fn_parse_date($data['timestamp']);
+    }
+
+    if (!empty($collection_id)) {
+        db_query("UPDATE ?:collections SET ?u WHERE collection_id = ?i", $data, $collection_id);
+        db_query("UPDATE ?:collections_descriptions SET ?u WHERE collection_id = ?i AND lang_code = ?s", $data, $collection_id, $lang_code);
+
+    } else {
+        $collection_id = $data['collection_id'] = db_replace_into('collection_id', $data);
+        
+        foreach (Languages::getAll() as $data['lang_code'] => $v) {
+            db_query("REPLACE INTO ?:collections_descriptions ?e", $data);
+        }
+
+    }
+    return $collection_id;
 }

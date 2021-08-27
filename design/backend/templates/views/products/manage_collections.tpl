@@ -84,14 +84,14 @@
         {capture name="buttons"}
             {capture name="tools_list"}
                 {if $collections}
-                    <li>{btn type="delete_selected" dispatch="dispatch[products.collections_delete]" form="collections_form"}</li>
-                    {include file="buttons/save.tpl" but_name="dispatch[products.collections_update]" but_role="action" but_target_form="collections_form" but_meta="cm-submit"}
+                    <li>{btn type="delete_selected" dispatch="dispatch[products.delete_collections]" form="collections_form"}</li>
                 {/if}
             {/capture}
             {dropdown content=$smarty.capture.tools_list class="mobile-hide"}
         {/capture}
 
         {capture name="adv_buttons"}
+            {include file="buttons/save.tpl" but_name="dispatch[products.update_collections]" but_role="action" but_target_form="collections_form" but_meta="cm-submit"}
             {include file="common/tools.tpl" tool_href="products.add_collection" prefix="top" hide_tools="true" title="Добавить коллекцию" icon="icon-plus"}
         {/capture}
 
