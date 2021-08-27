@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2021-08-26 21:29:21
+<?php /* Smarty version Smarty-3.1.21, created on 2021-08-27 12:35:03
          compiled from "C:\OpenServer\domains\cscart\design\backend\templates\views\products\update_collection.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:6093703756127dd811e50a5-91584587%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:13330948196128b1c72a5f14-30005533%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '360a9eb2d1b809bcb8ded3e764aca6389a4384a4' => 
     array (
       0 => 'C:\\OpenServer\\domains\\cscart\\design\\backend\\templates\\views\\products\\update_collection.tpl',
-      1 => 1630001949,
+      1 => 1630056893,
       2 => 'tygh',
     ),
   ),
-  'nocache_hash' => '6093703756127dd811e50a5-91584587',
+  'nocache_hash' => '13330948196128b1c72a5f14-30005533',
   'function' => 
   array (
   ),
@@ -28,9 +28,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21',
-  'unifunc' => 'content_6127dd81240062_65388248',
+  'unifunc' => 'content_6128b1c72d9e87_65560101',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_6127dd81240062_65388248')) {function content_6127dd81240062_65388248($_smarty_tpl) {?><?php
+<?php if ($_valid && !is_callable('content_6128b1c72d9e87_65560101')) {function content_6128b1c72d9e87_65560101($_smarty_tpl) {?><?php
 \Tygh\Languages\Helper::preloadLangVars(array('name','position_short','image','description','creation_date','delete'));
 ?>
 <?php if ($_smarty_tpl->tpl_vars['collection_data']->value) {?>
@@ -96,9 +96,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <?php echo $_smarty_tpl->getSubTemplate ("common/select_status.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('input_name'=>"collection_data[status]",'id'=>"elm_banner_status",'obj_id'=>$_smarty_tpl->tpl_vars['id']->value,'obj'=>$_smarty_tpl->tpl_vars['collection_data']->value,'hidden'=>false), 0);?>
 
         <!--content_general--></div>
-    <?php if (!$_smarty_tpl->tpl_vars['id']->value) {?>
+    <?php if ($_smarty_tpl->tpl_vars['id']->value) {?>
         <?php $_smarty_tpl->_capture_stack[0][] = array("tools_list", null, null); ob_start(); ?>
-            <li><?php smarty_template_function_btn($_smarty_tpl,array('type'=>"list",'text'=>$_smarty_tpl->__("delete"),'class'=>"cm-confirm",'href'=>"products.delete_collection?product_id=".((string)$_smarty_tpl->tpl_vars['id']->value),'method'=>"POST"));?>
+            <li><?php smarty_template_function_btn($_smarty_tpl,array('type'=>"list",'text'=>$_smarty_tpl->__("delete"),'class'=>"cm-confirm",'href'=>"products.delete_collection?collection_id=".((string)$_smarty_tpl->tpl_vars['id']->value),'method'=>"POST"));?>
 </li>
         <?php list($_capture_buffer, $_capture_assign, $_capture_append) = array_pop($_smarty_tpl->_capture_stack[0]);
 if (!empty($_capture_buffer)) {

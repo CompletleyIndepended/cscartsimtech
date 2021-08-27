@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2021-08-26 21:29:25
+<?php /* Smarty version Smarty-3.1.21, created on 2021-08-27 12:35:08
          compiled from "C:\OpenServer\domains\cscart\design\backend\templates\common\scripts.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:20741351876127dd85d35d17-32660082%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2268993286128b1cc663c57-02389321%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'tygh',
     ),
   ),
-  'nocache_hash' => '20741351876127dd85d35d17-32660082',
+  'nocache_hash' => '2268993286128b1cc663c57-02389321',
   'function' => 
   array (
   ),
@@ -35,9 +35,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21',
-  'unifunc' => 'content_6127dd85dd1751_05387865',
+  'unifunc' => 'content_6128b1cc77e740_81124534',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_6127dd85dd1751_05387865')) {function content_6127dd85dd1751_05387865($_smarty_tpl) {?><?php if (!is_callable('smarty_block_scripts')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.scripts.php';
+<?php if ($_valid && !is_callable('content_6128b1cc77e740_81124534')) {function content_6128b1cc77e740_81124534($_smarty_tpl) {?><?php if (!is_callable('smarty_block_scripts')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.scripts.php';
 if (!is_callable('smarty_function_script')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\function.script.php';
 if (!is_callable('smarty_block_inline_script')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.inline_script.php';
 if (!is_callable('smarty_block_hook')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.hook.php';
