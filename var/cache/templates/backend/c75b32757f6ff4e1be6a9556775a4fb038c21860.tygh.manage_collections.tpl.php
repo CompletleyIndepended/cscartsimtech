@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2021-09-01 10:39:03
+<?php /* Smarty version Smarty-3.1.21, created on 2021-09-01 12:51:34
          compiled from "C:\OpenServer\domains\cscart\design\backend\templates\views\products\manage_collections.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1090111877612f2e17a350a5-61275225%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1194654275612f4d26a6e440-57642635%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'c75b32757f6ff4e1be6a9556775a4fb038c21860' => 
     array (
       0 => 'C:\\OpenServer\\domains\\cscart\\design\\backend\\templates\\views\\products\\manage_collections.tpl',
-      1 => 1630080059,
+      1 => 1630488615,
       2 => 'tygh',
     ),
   ),
-  'nocache_hash' => '1090111877612f2e17a350a5-61275225',
+  'nocache_hash' => '1194654275612f4d26a6e440-57642635',
   'function' => 
   array (
   ),
@@ -34,9 +34,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21',
-  'unifunc' => 'content_612f2e17b285c2_95840722',
+  'unifunc' => 'content_612f4d26ae1874_96569877',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_612f2e17b285c2_95840722')) {function content_612f2e17b285c2_95840722($_smarty_tpl) {?><?php if (!is_callable('smarty_block_hook')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.hook.php';
+<?php if ($_valid && !is_callable('content_612f4d26ae1874_96569877')) {function content_612f4d26ae1874_96569877($_smarty_tpl) {?><?php if (!is_callable('smarty_block_hook')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.hook.php';
 ?><?php
 \Tygh\Languages\Helper::preloadLangVars(array('position','name','status','edit','delete','status','no_data'));
 ?>
@@ -190,6 +190,8 @@ if (!empty($_capture_buffer)) {
 } else $_smarty_tpl->capture_error();?>
             <?php smarty_template_function_dropdown($_smarty_tpl,array('content'=>Smarty::$_smarty_vars['capture']['tools_list'],'class'=>"mobile-hide"));?>
 
+            <?php echo $_smarty_tpl->getSubTemplate ("buttons/save.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('but_name'=>"dispatch[products.update_collections]",'but_role'=>"action",'but_target_form'=>"collections_form",'but_meta'=>"cm-submit"), 0);?>
+
         <?php list($_capture_buffer, $_capture_assign, $_capture_append) = array_pop($_smarty_tpl->_capture_stack[0]);
 if (!empty($_capture_buffer)) {
  if (isset($_capture_assign)) $_smarty_tpl->assign($_capture_assign, ob_get_contents());
@@ -198,8 +200,6 @@ if (!empty($_capture_buffer)) {
 } else $_smarty_tpl->capture_error();?>
 
         <?php $_smarty_tpl->_capture_stack[0][] = array("adv_buttons", null, null); ob_start(); ?>
-            <?php echo $_smarty_tpl->getSubTemplate ("buttons/save.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('but_name'=>"dispatch[products.update_collections]",'but_role'=>"action",'but_target_form'=>"collections_form",'but_meta'=>"cm-submit"), 0);?>
-
             <?php echo $_smarty_tpl->getSubTemplate ("common/tools.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('tool_href'=>"products.add_collection",'prefix'=>"top",'hide_tools'=>"true",'title'=>"Добавить коллекцию",'icon'=>"icon-plus"), 0);?>
 
         <?php list($_capture_buffer, $_capture_assign, $_capture_append) = array_pop($_smarty_tpl->_capture_stack[0]);

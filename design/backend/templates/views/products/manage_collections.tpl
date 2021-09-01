@@ -88,10 +88,10 @@
                 {/if}
             {/capture}
             {dropdown content=$smarty.capture.tools_list class="mobile-hide"}
+            {include file="buttons/save.tpl" but_name="dispatch[products.update_collections]" but_role="action" but_target_form="collections_form" but_meta="cm-submit"}
         {/capture}
 
         {capture name="adv_buttons"}
-            {include file="buttons/save.tpl" but_name="dispatch[products.update_collections]" but_role="action" but_target_form="collections_form" but_meta="cm-submit"}
             {include file="common/tools.tpl" tool_href="products.add_collection" prefix="top" hide_tools="true" title="Добавить коллекцию" icon="icon-plus"}
         {/capture}
 

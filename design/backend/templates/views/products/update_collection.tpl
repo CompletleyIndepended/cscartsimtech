@@ -24,7 +24,7 @@
                 </div>
             </div>
 
-            <div class="control-group" id="collection_graphic">
+            <div class="control-group" id="banner_graphic">
                 <label class="control-label">{__("image")}</label>
                 <div class="controls">
                     {include file="common/attach_images.tpl"
@@ -33,7 +33,7 @@
                         image_pair=$collection_data.main_pair
                         image_object_id=$id
                         no_detailed=true
-                        hide_titles=true
+                        hide_titles=false 
                     }
                 </div>
             </div>

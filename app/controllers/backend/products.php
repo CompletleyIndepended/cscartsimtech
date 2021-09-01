@@ -68,7 +68,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $suffix = ".add_collection";
         }
     } elseif ($mode === 'update_collections') {
-        fn_print_die($_REQUEST);
+        if(!empty($_REQUEST['collections_data'])) {
+            foreach($_REQUEST['collections_data'] as $collection_id => $data) {
+                fn_update_collection($data, $collection_id);
+            }
+        }
+        $suffix = ".manage_collections";     
     } elseif ($mode === 'delete_collection') {
         fn_print_die($_REQUEST);
     } elseif ($mode === 'delete_collections') {
@@ -1473,12 +1478,12 @@ function fn_get_collections($params = [], $items_per_page = 0, $lang_code = CART
         'collection_id', implode(', ', $fields), $condition, $sorting, $limit
     );
 
-    //$banner_image_ids = array_column($banners, 'banner_image_id');
-    //$images = fn_get_image_pairs($banner_image_ids, 'promo', 'M', true, false, $lang_code);
+    $collection_image_ids = array_keys($collections);
+    $images = fn_get_image_pairs($collection_image_ids, 'collection', 'M', true, false, $lang_code);
 
-    //foreach ($collections as $collection_id => $collections) {
-    //    $banners[$collection_id]['main_pair'] = !empty($images[$banner['banner_image_id']]) ? reset($images[$banner['banner_image_id']]) : array();
-    //}
+    foreach ($collections as $collection_id => $collection) {
+       $collections[$collection_id]['main_pair'] = !empty($images[$collection_id]) ? reset($images[$collection_id]) : array();
+    }
 
     return array($collections, $params);
 
@@ -1502,5 +1507,10 @@ function fn_update_collection($data, $collection_id, $lang_code = DESCR_SL)
         }
 
     }
+
+    if (!empty($collection_id)) {
+        fn_attach_image_pairs('collection', 'collection', $collection_id, $lang_code);
+    }
+
     return $collection_id;
 }
