@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2021-08-27 19:16:29
+<?php /* Smarty version Smarty-3.1.21, created on 2021-09-01 10:39:16
          compiled from "C:\OpenServer\domains\cscart\design\backend\templates\addons\tags\hooks\index\scripts.post.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:80912743461290fdd25a394-94496507%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:850346212612f2e248e3c49-80889703%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,15 +11,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'tygh',
     ),
   ),
-  'nocache_hash' => '80912743461290fdd25a394-94496507',
+  'nocache_hash' => '850346212612f2e248e3c49-80889703',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21',
-  'unifunc' => 'content_61290fdd260f80_88356550',
+  'unifunc' => 'content_612f2e248f2f86_84558594',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_61290fdd260f80_88356550')) {function content_61290fdd260f80_88356550($_smarty_tpl) {?><?php if (!is_callable('smarty_block_inline_script')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.inline_script.php';
+<?php if ($_valid && !is_callable('content_612f2e248f2f86_84558594')) {function content_612f2e248f2f86_84558594($_smarty_tpl) {?><?php if (!is_callable('smarty_block_inline_script')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.inline_script.php';
 ?><?php
 \Tygh\Languages\Helper::preloadLangVars(array('addons.tags.add_a_tag'));
 ?>

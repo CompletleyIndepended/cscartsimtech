@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2021-08-27 19:16:27
+<?php /* Smarty version Smarty-3.1.21, created on 2021-09-01 10:39:01
          compiled from "C:\OpenServer\domains\cscart\design\backend\templates\components\bottom_panel\bottom_panel.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:19613395361290fdbc6d021-92966887%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:481895727612f2e1521d374-60688543%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'tygh',
     ),
   ),
-  'nocache_hash' => '19613395361290fdbc6d021-92966887',
+  'nocache_hash' => '481895727612f2e1521d374-60688543',
   'function' => 
   array (
   ),
@@ -38,9 +38,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21',
-  'unifunc' => 'content_61290fdbdb5353_48614503',
+  'unifunc' => 'content_612f2e155529a6_24263348',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_61290fdbdb5353_48614503')) {function content_61290fdbdb5353_48614503($_smarty_tpl) {?><?php if (!is_callable('smarty_block_styles')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.styles.php';
+<?php if ($_valid && !is_callable('content_612f2e155529a6_24263348')) {function content_612f2e155529a6_24263348($_smarty_tpl) {?><?php if (!is_callable('smarty_block_styles')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.styles.php';
 if (!is_callable('smarty_function_style')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\function.style.php';
 if (!is_callable('smarty_block_hook')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.hook.php';
 if (!is_callable('smarty_modifier_enum')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\modifier.enum.php';

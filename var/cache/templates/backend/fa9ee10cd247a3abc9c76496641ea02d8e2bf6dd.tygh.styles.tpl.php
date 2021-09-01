@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2021-08-27 19:16:20
+<?php /* Smarty version Smarty-3.1.21, created on 2021-09-01 10:38:56
          compiled from "C:\OpenServer\domains\cscart\design\backend\templates\common\styles.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:20806634561290fd479ed58-36849632%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:384062365612f2e10ecc2f7-12740512%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'tygh',
     ),
   ),
-  'nocache_hash' => '20806634561290fd479ed58-36849632',
+  'nocache_hash' => '384062365612f2e10ecc2f7-12740512',
   'function' => 
   array (
   ),
@@ -22,9 +22,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21',
-  'unifunc' => 'content_61290fd47b9986_49262378',
+  'unifunc' => 'content_612f2e10f0e9b6_42763707',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_61290fd47b9986_49262378')) {function content_61290fd47b9986_49262378($_smarty_tpl) {?><?php if (!is_callable('smarty_block_styles')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.styles.php';
+<?php if ($_valid && !is_callable('content_612f2e10f0e9b6_42763707')) {function content_612f2e10f0e9b6_42763707($_smarty_tpl) {?><?php if (!is_callable('smarty_block_styles')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.styles.php';
 if (!is_callable('smarty_function_style')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\function.style.php';
 if (!is_callable('smarty_block_hook')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.hook.php';
 ?><?php $_smarty_tpl->smarty->_tag_stack[] = array('styles', array()); $_block_repeat=true; echo smarty_block_styles(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>

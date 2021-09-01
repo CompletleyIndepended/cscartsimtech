@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'collection_data'
     );
 
-    if ($mode === 'update_collection') {
+    if ($mode === 'update_collection') {    
         $collection_id = !empty($_REQUEST['collection_id']) ? $_REQUEST['collection_id'] : 0;
         $data = !empty($_REQUEST['collection_data']) ? $_REQUEST['collection_data'] : [];
         $collection_id = fn_update_collection($data, $collection_id);
@@ -68,9 +68,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $suffix = ".add_collection";
         }
     } elseif ($mode === 'update_collections') {
-        // fn_print_die($_REQUEST);
+        fn_print_die($_REQUEST);
     } elseif ($mode === 'delete_collection') {
-        // fn_print_die($_REQUEST);
+        fn_print_die($_REQUEST);
     } elseif ($mode === 'delete_collections') {
         fn_print_die($_REQUEST);
     }
@@ -1495,7 +1495,7 @@ function fn_update_collection($data, $collection_id, $lang_code = DESCR_SL)
         db_query("UPDATE ?:collections_descriptions SET ?u WHERE collection_id = ?i AND lang_code = ?s", $data, $collection_id, $lang_code);
 
     } else {
-        $collection_id = $data['collection_id'] = db_replace_into('collection_id', $data);
+        $collection_id = $data['collection_id'] = db_replace_into('collections', $data);
         
         foreach (Languages::getAll() as $data['lang_code'] => $v) {
             db_query("REPLACE INTO ?:collections_descriptions ?e", $data);

@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2021-08-27 19:16:25
+<?php /* Smarty version Smarty-3.1.21, created on 2021-09-01 10:39:08
          compiled from "C:\OpenServer\domains\cscart\design\backend\templates\common\mainbox.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:64888494961290fd950c5f4-09672156%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:115351616612f2e1c2d3757-73975070%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'tygh',
     ),
   ),
-  'nocache_hash' => '64888494961290fd950c5f4-09672156',
+  'nocache_hash' => '115351616612f2e1c2d3757-73975070',
   'function' => 
   array (
   ),
@@ -59,9 +59,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21',
-  'unifunc' => 'content_61290fd95dda96_42867193',
+  'unifunc' => 'content_612f2e1c479137_05270314',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_61290fd95dda96_42867193')) {function content_61290fd95dda96_42867193($_smarty_tpl) {?><?php if (!is_callable('smarty_block_inline_script')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.inline_script.php';
+<?php if ($_valid && !is_callable('content_612f2e1c479137_05270314')) {function content_612f2e1c479137_05270314($_smarty_tpl) {?><?php if (!is_callable('smarty_block_inline_script')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.inline_script.php';
 if (!is_callable('smarty_block_hook')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.hook.php';
 if (!is_callable('smarty_block_notes')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.notes.php';
 if (!is_callable('smarty_modifier_sanitize_html')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\modifier.sanitize_html.php';
