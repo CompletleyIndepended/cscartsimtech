@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2021-09-01 12:51:34
+<?php /* Smarty version Smarty-3.1.21, created on 2021-09-01 21:53:44
          compiled from "C:\OpenServer\domains\cscart\design\backend\templates\views\products\manage_collections.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1194654275612f4d26a6e440-57642635%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:478662804612fcc383b2839-25063944%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'c75b32757f6ff4e1be6a9556775a4fb038c21860' => 
     array (
       0 => 'C:\\OpenServer\\domains\\cscart\\design\\backend\\templates\\views\\products\\manage_collections.tpl',
-      1 => 1630488615,
+      1 => 1630514678,
       2 => 'tygh',
     ),
   ),
-  'nocache_hash' => '1194654275612f4d26a6e440-57642635',
+  'nocache_hash' => '478662804612fcc383b2839-25063944',
   'function' => 
   array (
   ),
@@ -34,9 +34,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21',
-  'unifunc' => 'content_612f4d26ae1874_96569877',
+  'unifunc' => 'content_612fcc38418824_10855175',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_612f4d26ae1874_96569877')) {function content_612f4d26ae1874_96569877($_smarty_tpl) {?><?php if (!is_callable('smarty_block_hook')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.hook.php';
+<?php if ($_valid && !is_callable('content_612fcc38418824_10855175')) {function content_612fcc38418824_10855175($_smarty_tpl) {?><?php if (!is_callable('smarty_block_hook')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.hook.php';
 ?><?php
 \Tygh\Languages\Helper::preloadLangVars(array('position','name','status','edit','delete','status','no_data'));
 ?>
@@ -72,32 +72,54 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
                             </th>
                             
-                            <th><a class="cm-ajax" href="<?php echo htmlspecialchars(fn_url(((string)$_smarty_tpl->tpl_vars['c_url']->value)."&sort_by=position&sort_order=".((string)$_smarty_tpl->tpl_vars['search']->value['sort_order_rev'])), ENT_QUOTES, 'UTF-8');?>
+                            <th>
+                                <a class="cm-ajax" href="<?php echo htmlspecialchars(fn_url(((string)$_smarty_tpl->tpl_vars['c_url']->value)."&sort_by=position&sort_order=".((string)$_smarty_tpl->tpl_vars['search']->value['sort_order_rev'])), ENT_QUOTES, 'UTF-8');?>
 " data-ca-target-id=<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['rev']->value, ENT_QUOTES, 'UTF-8');?>
-><?php echo $_smarty_tpl->__("position");
-if ($_smarty_tpl->tpl_vars['search']->value['sort_by']=="position") {
-echo $_smarty_tpl->tpl_vars['c_icon']->value;
-} else {
-echo $_smarty_tpl->tpl_vars['c_dummy']->value;
-}?></a></th>
-                            <th class=""><a class="cm-ajax" href="<?php echo htmlspecialchars(fn_url(((string)$_smarty_tpl->tpl_vars['c_url']->value)."&sort_by=name&sort_order=".((string)$_smarty_tpl->tpl_vars['search']->value['sort_order_rev'])), ENT_QUOTES, 'UTF-8');?>
+>
+                                <?php echo $_smarty_tpl->__("position");?>
+
+                                    <?php if ($_smarty_tpl->tpl_vars['search']->value['sort_by']=="position") {?>
+                                        <?php echo $_smarty_tpl->tpl_vars['c_icon']->value;?>
+
+                                    <?php } else { ?>
+                                        <?php echo $_smarty_tpl->tpl_vars['c_dummy']->value;?>
+
+                                    <?php }?>
+                                </a>
+                            </th>
+                            <th>
+                                <a class="cm-ajax" href="<?php echo htmlspecialchars(fn_url(((string)$_smarty_tpl->tpl_vars['c_url']->value)."&sort_by=name&sort_order=".((string)$_smarty_tpl->tpl_vars['search']->value['sort_order_rev'])), ENT_QUOTES, 'UTF-8');?>
 " data-ca-target-id=<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['rev']->value, ENT_QUOTES, 'UTF-8');?>
-><?php echo $_smarty_tpl->__("name");
-if ($_smarty_tpl->tpl_vars['search']->value['sort_by']=="name") {
-echo $_smarty_tpl->tpl_vars['c_icon']->value;
-} else {
-echo $_smarty_tpl->tpl_vars['c_dummy']->value;
-}?></a></th>
+>
+                                    <?php echo $_smarty_tpl->__("name");?>
+
+                                    <?php if ($_smarty_tpl->tpl_vars['search']->value['sort_by']=="name") {?>
+                                        <?php echo $_smarty_tpl->tpl_vars['c_icon']->value;?>
+
+                                    <?php } else { ?>
+                                        <?php echo $_smarty_tpl->tpl_vars['c_dummy']->value;?>
+
+                                    <?php }?>
+                                </a>
+                            </th>
 
                             <th width="6%" class="mobile-hide">&nbsp;</th>
-                            <th width="10%" class="right"><a class="cm-ajax" href="<?php echo htmlspecialchars(fn_url(((string)$_smarty_tpl->tpl_vars['c_url']->value)."&sort_by=status&sort_order=".((string)$_smarty_tpl->tpl_vars['search']->value['sort_order_rev'])), ENT_QUOTES, 'UTF-8');?>
+
+                            <th width="10%" class="right">
+                                <a class="cm-ajax" href="<?php echo htmlspecialchars(fn_url(((string)$_smarty_tpl->tpl_vars['c_url']->value)."&sort_by=status&sort_order=".((string)$_smarty_tpl->tpl_vars['search']->value['sort_order_rev'])), ENT_QUOTES, 'UTF-8');?>
 " data-ca-target-id=<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['rev']->value, ENT_QUOTES, 'UTF-8');?>
-><?php echo $_smarty_tpl->__("status");
-if ($_smarty_tpl->tpl_vars['search']->value['sort_by']=="status") {
-echo $_smarty_tpl->tpl_vars['c_icon']->value;
-} else {
-echo $_smarty_tpl->tpl_vars['c_dummy']->value;
-}?></a></th>
+>
+                                    <?php echo $_smarty_tpl->__("status");?>
+
+                                    <?php if ($_smarty_tpl->tpl_vars['search']->value['sort_by']=="status") {?>
+                                        <?php echo $_smarty_tpl->tpl_vars['c_icon']->value;?>
+
+                                    <?php } else { ?>
+                                        <?php echo $_smarty_tpl->tpl_vars['c_dummy']->value;?>
+
+                                    <?php }?>
+                                </a>
+                            </th>
                         </tr>
                     </thead>
                     <?php  $_smarty_tpl->tpl_vars['collection'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['collection']->_loop = false;

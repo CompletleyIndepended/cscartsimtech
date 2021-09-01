@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2021-09-01 12:51:34
+<?php /* Smarty version Smarty-3.1.21, created on 2021-09-01 21:53:42
          compiled from "C:\OpenServer\domains\cscart\design\backend\templates\buttons\helpers.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1489927942612f4d26560757-96510279%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1187628787612fcc36ec9cb2-85745581%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'tygh',
     ),
   ),
-  'nocache_hash' => '1489927942612f4d26560757-96510279',
+  'nocache_hash' => '1187628787612fcc36ec9cb2-85745581',
   'function' => 
   array (
     'btn' => 
@@ -82,9 +82,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => 0,
   'version' => 'Smarty-3.1.21',
-  'unifunc' => 'content_612f4d26657ad3_77662586',
+  'unifunc' => 'content_612fcc3705c764_98732192',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_612f4d26657ad3_77662586')) {function content_612f4d26657ad3_77662586($_smarty_tpl) {?><?php
+<?php if ($_valid && !is_callable('content_612fcc3705c764_98732192')) {function content_612fcc3705c764_98732192($_smarty_tpl) {?><?php
 \Tygh\Languages\Helper::preloadLangVars(array('delete_selected','delete','tools'));
 ?>
 
@@ -97,8 +97,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <?php $_smarty_tpl->tpl_vars['method'] = new Smarty_variable(mb_strtoupper($_smarty_tpl->tpl_vars['method']->value, 'UTF-8'), null, 0);?>
 
     <?php ob_start();?><?php echo htmlspecialchars((($tmp = @$_smarty_tpl->tpl_vars['method']->value)===null||$tmp==='' ? "GET" : $tmp), ENT_QUOTES, 'UTF-8');?>
-<?php $_tmp1=ob_get_clean();?><?php ob_start();?><?php echo htmlspecialchars((($tmp = @$_smarty_tpl->tpl_vars['method']->value)===null||$tmp==='' ? "POST" : $tmp), ENT_QUOTES, 'UTF-8');?>
-<?php $_tmp2=ob_get_clean();?><?php if (fn_check_view_permissions($_smarty_tpl->tpl_vars['href']->value,$_tmp1)&&fn_check_view_permissions($_smarty_tpl->tpl_vars['dispatch']->value,$_tmp2)) {?>
+<?php $_tmp3=ob_get_clean();?><?php ob_start();?><?php echo htmlspecialchars((($tmp = @$_smarty_tpl->tpl_vars['method']->value)===null||$tmp==='' ? "POST" : $tmp), ENT_QUOTES, 'UTF-8');?>
+<?php $_tmp4=ob_get_clean();?><?php if (fn_check_view_permissions($_smarty_tpl->tpl_vars['href']->value,$_tmp3)&&fn_check_view_permissions($_smarty_tpl->tpl_vars['dispatch']->value,$_tmp4)) {?>
     
     <?php if ($_smarty_tpl->tpl_vars['type']->value==="text"||$_smarty_tpl->tpl_vars['type']->value==="button") {?>
         <?php if ($_smarty_tpl->tpl_vars['href']->value&&$_smarty_tpl->tpl_vars['method']->value=="POST") {?>

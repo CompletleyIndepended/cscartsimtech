@@ -75,9 +75,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
         $suffix = ".manage_collections";     
     } elseif ($mode === 'delete_collection') {
-        fn_print_die($_REQUEST);
+        $collection_id = !empty($_REQUEST['collection_id']) ? $_REQUEST['collection_id'] : 0;
+        fn_delete_collection($collection_id);
+        $suffix = ".manage_collections";
     } elseif ($mode === 'delete_collections') {
-        fn_print_die($_REQUEST);
+        // fn_print_die($_REQUEST);
+        if (!empty($_REQUEST['collections_ids'])){
+            foreach ($_REQUEST['collections_ids'] as $collection_id){
+                fn_delete_collection($collection_id);
+            }
+        }
+        $suffix = ".manage_collections";
     }
 
 
@@ -1396,7 +1404,10 @@ if ($mode === 'add') {
     if (empty($collection_data) && $mode === 'update') {
         return [CONTROLLER_STATUS_NO_PAGE];
     }
-    Tygh::$app['view']->assign('collection_data', $collection_data);
+    Tygh::$app['view']->assign([
+        'collection_data' => $collection_data,
+        'u_info' => !empty([$collection_data['user_id']]) ? fn_get_user_short_info($collection_data['user_id']) : [],
+    ]);
 } elseif ($mode === 'manage_collections'){
     list($collections, $search) = fn_get_collections($_REQUEST, Registry::get('settings.Appearance.admin_elements_per_page'), DESCR_SL);
     Tygh::$app['view']->assign('collections', $collections);
@@ -1410,8 +1421,11 @@ function fn_get_collection_data($collection_id = 0, $lang_code = CART_LANGUAGE)
         list($collections) = fn_get_collections([
             'collection_id' => $collection_id
         ], 1, $lang_code);
-        $collection=!empty($collections) ? reset($collections) : [];
 
+        if(!empty($collections)){
+            $collection = reset($collections);
+            $collection['product_ids'] = fn_collection_get_links($collection['collection_id']);
+        }
     }
     return $collection;
 }
@@ -1457,9 +1471,7 @@ function fn_get_collections($params = [], $items_per_page = 0, $lang_code = CART
     }
 
     $fields = array (
-        '?:collections.collection_id',
-        '?:collections.status',
-        '?:collections.position',
+        '?:collections.*',
         '?:collections_descriptions.collection',
         '?:collections_descriptions.description',
     );
@@ -1512,5 +1524,41 @@ function fn_update_collection($data, $collection_id, $lang_code = DESCR_SL)
         fn_attach_image_pairs('collection', 'collection', $collection_id, $lang_code);
     }
 
+    $product_ids = !empty($data['product_ids']) ? $data['product_ids'] : [];
+
+    fn_collection_delete_links($collection_id);
+    fn_collection_add_links($collection_id, $product_ids);
+
     return $collection_id;
 }
+
+function fn_delete_collection($collection_id)
+{
+    if (!empty($collection_id)) {
+        $res = db_query("DELETE FROM ?:collections WHERE collection_id = ?i", $collection_id);
+        db_query("DELETE FROM ?:collections_descriptions WHERE collection_id = ?i", $collection_id);
+        fn_collection_delete_links($collection_id);
+    }
+}
+
+function fn_collection_delete_links($collection_id){
+    db_query("DELETE FROM ?:collections_links WHERE collection_id = ?i", $collection_id);
+}
+
+function fn_collection_add_links($collection_id, $product_ids){
+
+    if(!empty($product_ids)){
+        foreach($product_ids as $product_id){
+            db_query("REPLACE INTO ?:collections_links ?e", [
+                'product_id' => $product_id,
+                'collection_id' => $collection_id,
+            ]);
+        }
+    }
+}
+
+function fn_collection_get_links($collection_id){
+    return !empty($collection_id) ? db_get_fields('SELECT product_id FROM `?:collections_links` WHERE `collection_id` = ?i', $collection_id) : [];
+}
+
+

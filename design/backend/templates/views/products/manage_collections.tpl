@@ -27,11 +27,39 @@
                                 {include file="common/check_items.tpl" is_check_disabled=!$has_permission check_statuses=($has_permission) ? $banner_statuses : '' }
                             </th>
                             
-                            <th><a class="cm-ajax" href="{"`$c_url`&sort_by=position&sort_order=`$search.sort_order_rev`"|fn_url}" data-ca-target-id={$rev}>{__("position")}{if $search.sort_by == "position"}{$c_icon nofilter}{else}{$c_dummy nofilter}{/if}</a></th>
-                            <th class=""><a class="cm-ajax" href="{"`$c_url`&sort_by=name&sort_order=`$search.sort_order_rev`"|fn_url}" data-ca-target-id={$rev}>{__("name")}{if $search.sort_by == "name"}{$c_icon nofilter}{else}{$c_dummy nofilter}{/if}</a></th>
+                            <th>
+                                <a class="cm-ajax" href="{"`$c_url`&sort_by=position&sort_order=`$search.sort_order_rev`"|fn_url}" data-ca-target-id={$rev}>
+                                {__("position")}
+                                    {if $search.sort_by == "position"}
+                                        {$c_icon nofilter}
+                                    {else}
+                                        {$c_dummy nofilter}
+                                    {/if}
+                                </a>
+                            </th>
+                            <th>
+                                <a class="cm-ajax" href="{"`$c_url`&sort_by=name&sort_order=`$search.sort_order_rev`"|fn_url}" data-ca-target-id={$rev}>
+                                    {__("name")}
+                                    {if $search.sort_by == "name"}
+                                        {$c_icon nofilter}
+                                    {else}
+                                        {$c_dummy nofilter}
+                                    {/if}
+                                </a>
+                            </th>
 
                             <th width="6%" class="mobile-hide">&nbsp;</th>
-                            <th width="10%" class="right"><a class="cm-ajax" href="{"`$c_url`&sort_by=status&sort_order=`$search.sort_order_rev`"|fn_url}" data-ca-target-id={$rev}>{__("status")}{if $search.sort_by == "status"}{$c_icon nofilter}{else}{$c_dummy nofilter}{/if}</a></th>
+
+                            <th width="10%" class="right">
+                                <a class="cm-ajax" href="{"`$c_url`&sort_by=status&sort_order=`$search.sort_order_rev`"|fn_url}" data-ca-target-id={$rev}>
+                                    {__("status")}
+                                    {if $search.sort_by == "status"}
+                                        {$c_icon nofilter}
+                                    {else}
+                                        {$c_dummy nofilter}
+                                    {/if}
+                                </a>
+                            </th>
                         </tr>
                     </thead>
                     {foreach from=$collections item=collection}
