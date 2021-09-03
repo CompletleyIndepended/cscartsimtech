@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2021-09-03 17:13:10
+<?php /* Smarty version Smarty-3.1.21, created on 2021-09-03 18:08:31
          compiled from "C:\OpenServer\domains\cscart\design\backend\templates\views\products\update_collection.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:570639425613229e10a3941-94328799%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '360a9eb2d1b809bcb8ded3e764aca6389a4384a4' => 
     array (
       0 => 'C:\\OpenServer\\domains\\cscart\\design\\backend\\templates\\views\\products\\update_collection.tpl',
-      1 => 1630678381,
+      1 => 1630681695,
       2 => 'tygh',
     ),
   ),
@@ -111,7 +111,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             </div>
         </div>
 
-        <?php echo $_smarty_tpl->getSubTemplate ("views/products/components/picker/picker.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('input_name'=>"collection_data[product_ids][]",'item_ids'=>$_smarty_tpl->tpl_vars['collection_data']->value[$_smarty_tpl->getVariable('smarty')->value['section']['product_ids']['index']],'multiple'=>true,'view_mode'=>"external",'select_group_class'=>"btn-toolbar"), 0);?>
+        <?php echo $_smarty_tpl->getSubTemplate ("views/products/components/picker/picker.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('input_name'=>"collection_data[product_ids][]",'item_ids'=>$_smarty_tpl->tpl_vars['collection_data']->value['product_ids'],'multiple'=>true,'view_mode'=>"external",'select_group_class'=>"btn-toolbar"), 0);?>
    
 
     </div>
