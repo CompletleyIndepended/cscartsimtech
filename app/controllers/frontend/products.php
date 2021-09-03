@@ -253,6 +253,45 @@ if ($mode == 'search') {
     }
 
     exit;
+} elseif ($mode == 'collections') {
+
+    // Save current url to session for 'Continue shopping' button
+    Tygh::$app['session']['continue_url'] = "products.collections";
+
+    $params = $_REQUEST;
+
+    if ($items_per_page = fn_change_session_param(Tygh::$app['session'], $_REQUEST, 'items_per_page')) {
+        $params['items_per_page'] = $items_per_page;
+    }
+    if ($sort_by = fn_change_session_param(Tygh::$app['session'], $_REQUEST, 'sort_by')) {
+        $params['sort_by'] = $sort_by;
+    }
+    if ($sort_order = fn_change_session_param(Tygh::$app['session'], $_REQUEST, 'sort_order')) {
+        $params['sort_order'] = $sort_order;
+    }
+
+    if (isset($params['order_ids'])) {
+        $order_ids = is_array($params['order_ids']) ? $params['order_ids'] : explode(',', $params['order_ids']);
+        foreach ($order_ids as $order_id) {
+            if (!fn_is_order_allowed($order_id, $auth)) {
+                return [CONTROLLER_STATUS_NO_PAGE];
+            }
+        }
+    }
+
+    $params['user_id'] = Tygh::$app['session']['auth']['user_id'];     
+
+    list($collection, $search) = fn_get_collections($params, Registry::get('settings.Appearance.products_per_page'), CART_LANGUAGE);
+    if (isset($search['page']) && ($search['page'] > 1) && empty($products)) {
+        return array(CONTROLLER_STATUS_NO_PAGE);
+    }
+    Tygh::$app['view']->assign('is_selected_filters', !empty($params['features_hash']));
+
+    Tygh::$app['view']->assign('collection', $collection);
+    Tygh::$app['view']->assign('search', $search);
+
+    fn_add_breadcrumb("Коллекции");
+        
 }
 
 function fn_add_product_to_recently_viewed($product_id, $max_list_size = MAX_RECENTLY_VIEWED)

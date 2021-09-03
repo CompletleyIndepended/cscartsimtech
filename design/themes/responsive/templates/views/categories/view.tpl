@@ -17,7 +17,7 @@
     {assign var="product_columns" value=$settings.Appearance.columns_in_products_list}
 {/if}
 {$is_selected_filters = $smarty.request.features_hash}
-
+{$layouts.$selected_layout.template|fn_print_r}
 {if $layouts.$selected_layout.template}
     {include file="`$layouts.$selected_layout.template`" columns=$product_columns}
 {/if}

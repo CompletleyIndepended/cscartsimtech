@@ -11,6 +11,7 @@
         {$rev=$smarty.request.content_id|default:"pagination_contents_collections"}
         {$c_icon="<i class=\"icon-`$search.sort_order_rev`\"></i>"}
         {$c_dummy="<i class=\"icon-dummy\"></i>"}
+        {* {assign var="c_url" value=$config.current_url|fn_query_remove:"sort_by":"sort_order"} *}
         {$banner_statuses=""|fn_get_default_statuses:true}
         {$has_permission = fn_check_permissions("collections", "update_status", "admin", "POST")}
 
@@ -82,6 +83,7 @@
                         <td>
                             <input type="text" name="collections_data[{$collection.collection_id}][position]" value="{$collection.position}" size="3" class="input-micro">
                         </td>
+                        {"collections_data[{$collection.collection_id}][position]"|fn_print_die}
                     
                         <td class="{$no_hide_input}" data-th="name">
                             <a class="row-status" href="{"products.update_collection?collection_id=`$collection.collection_id`"|fn_url}">{$collection.collection}</a>
@@ -89,9 +91,9 @@
 
                         <td width="6%" class="mobile-hide">
                             {capture name="tools_list"}
-                                <li>{btn type="list" text=__("edit") href="products.update_collection?banner_id=`$collection.collection_id`"}</li>
+                                <li>{btn type="list" text=__("edit") href="products.update_collection?collection_id=`$collection.collection_id`"}</li>
                             {if $allow_save}
-                                <li>{btn type="list" class="cm-confirm" text=__("delete") href="products.collection_delete?banner_id=`$collection.collection_id`" method="POST"}</li>
+                                <li>{btn type="list" class="cm-confirm" text=__("delete") href="products.collection_delete?collection_id=`$collection.collection_id`" method="POST"}</li>
                             {/if}
                             {/capture}
                             <div class="hidden-tools">
