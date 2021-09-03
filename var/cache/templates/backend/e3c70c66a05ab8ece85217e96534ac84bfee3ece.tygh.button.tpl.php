@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2021-09-03 16:57:32
+<?php /* Smarty version Smarty-3.1.21, created on 2021-09-03 18:20:39
          compiled from "C:\OpenServer\domains\cscart\design\backend\templates\buttons\button.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1719131170613229ccbee892-34605930%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:187655405761323d47a86688-40044630%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'tygh',
     ),
   ),
-  'nocache_hash' => '1719131170613229ccbee892-34605930',
+  'nocache_hash' => '187655405761323d47a86688-40044630',
   'function' => 
   array (
   ),
@@ -42,9 +42,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21',
-  'unifunc' => 'content_613229ccd0a264_08530555',
+  'unifunc' => 'content_61323d47b5dd99_67150783',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_613229ccd0a264_08530555')) {function content_613229ccd0a264_08530555($_smarty_tpl) {?><?php if ($_smarty_tpl->tpl_vars['but_role']->value=="text") {?>
+<?php if ($_valid && !is_callable('content_61323d47b5dd99_67150783')) {function content_61323d47b5dd99_67150783($_smarty_tpl) {?><?php if ($_smarty_tpl->tpl_vars['but_role']->value=="text") {?>
     <?php $_smarty_tpl->tpl_vars["class"] = new Smarty_variable('', null, 0);?>
     <?php } else { ?>
     <?php $_smarty_tpl->tpl_vars["class"] = new Smarty_variable("btn", null, 0);?>

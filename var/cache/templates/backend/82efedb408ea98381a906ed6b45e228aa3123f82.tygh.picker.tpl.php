@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2021-09-03 16:57:56
+<?php /* Smarty version Smarty-3.1.21, created on 2021-09-03 18:20:40
          compiled from "C:\OpenServer\domains\cscart\design\backend\templates\pickers\products\picker.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:346617613229e45b5ca0-10980410%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:86045185061323d4897f0a1-01390415%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'tygh',
     ),
   ),
-  'nocache_hash' => '346617613229e45b5ca0-10980410',
+  'nocache_hash' => '86045185061323d4897f0a1-01390415',
   'function' => 
   array (
   ),
@@ -59,9 +59,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21',
-  'unifunc' => 'content_613229e46bc129_10196414',
+  'unifunc' => 'content_61323d48a68d57_41068672',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_613229e46bc129_10196414')) {function content_613229e46bc129_10196414($_smarty_tpl) {?><?php if (!is_callable('smarty_function_math')) include 'C:\\OpenServer\\domains\\cscart\\app\\lib\\vendor\\smarty\\smarty\\libs\\plugins\\function.math.php';
+<?php if ($_valid && !is_callable('content_61323d48a68d57_41068672')) {function content_61323d48a68d57_41068672($_smarty_tpl) {?><?php if (!is_callable('smarty_function_math')) include 'C:\\OpenServer\\domains\\cscart\\app\\lib\\vendor\\smarty\\smarty\\libs\\plugins\\function.math.php';
 if (!is_callable('smarty_function_script')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\function.script.php';
 if (!is_callable('smarty_modifier_count')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\modifier.count.php';
 if (!is_callable('smarty_block_hook')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.hook.php';
@@ -287,7 +287,7 @@ echo htmlspecialchars(implode(",",$_smarty_tpl->tpl_vars['item_ids']->value), EN
 if ($_smarty_tpl->tpl_vars['picker_view']->value) {?>[<?php }?>
             <?php ob_start();
 if ($_smarty_tpl->tpl_vars['for_current_storefront']->value) {?><?php echo "&for_current_storefront=";?><?php echo (string)$_smarty_tpl->tpl_vars['for_current_storefront']->value;?><?php }
-$_tmp11=ob_get_clean();?><?php echo $_smarty_tpl->getSubTemplate ("buttons/button.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('but_id'=>"opener_picker_".((string)$_smarty_tpl->tpl_vars['data_id']->value),'but_href'=>fn_url("products.picker?display=".((string)$_smarty_tpl->tpl_vars['display']->value)."&company_id=".((string)$_smarty_tpl->tpl_vars['company_id']->value)."&company_ids=".((string)$_smarty_tpl->tpl_vars['company_ids']->value)."&picker_for=".((string)$_smarty_tpl->tpl_vars['picker_for']->value)."&extra=".((string)$_smarty_tpl->tpl_vars['extra_var']->value)."&checkbox_name=".((string)$_smarty_tpl->tpl_vars['checkbox_name']->value)."&aoc=".((string)$_smarty_tpl->tpl_vars['aoc']->value)."&data_id=".((string)$_smarty_tpl->tpl_vars['data_id']->value)."&is_order_management=".((string)$_smarty_tpl->tpl_vars['is_order_management']->value)."&only_selectable_options=".((string)$_smarty_tpl->tpl_vars['only_selectable_options']->value).$_tmp11),'but_text'=>(($tmp = @$_smarty_tpl->tpl_vars['but_text']->value)===null||$tmp==='' ? $_smarty_tpl->__("add_products") : $tmp),'but_role'=>"add",'but_target_id'=>"content_".((string)$_smarty_tpl->tpl_vars['data_id']->value),'but_meta'=>"cm-dialog-opener ".((string)$_smarty_tpl->tpl_vars['dialog_opener_meta']->value)), 0);?>
+$_tmp22=ob_get_clean();?><?php echo $_smarty_tpl->getSubTemplate ("buttons/button.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('but_id'=>"opener_picker_".((string)$_smarty_tpl->tpl_vars['data_id']->value),'but_href'=>fn_url("products.picker?display=".((string)$_smarty_tpl->tpl_vars['display']->value)."&company_id=".((string)$_smarty_tpl->tpl_vars['company_id']->value)."&company_ids=".((string)$_smarty_tpl->tpl_vars['company_ids']->value)."&picker_for=".((string)$_smarty_tpl->tpl_vars['picker_for']->value)."&extra=".((string)$_smarty_tpl->tpl_vars['extra_var']->value)."&checkbox_name=".((string)$_smarty_tpl->tpl_vars['checkbox_name']->value)."&aoc=".((string)$_smarty_tpl->tpl_vars['aoc']->value)."&data_id=".((string)$_smarty_tpl->tpl_vars['data_id']->value)."&is_order_management=".((string)$_smarty_tpl->tpl_vars['is_order_management']->value)."&only_selectable_options=".((string)$_smarty_tpl->tpl_vars['only_selectable_options']->value).$_tmp22),'but_text'=>(($tmp = @$_smarty_tpl->tpl_vars['but_text']->value)===null||$tmp==='' ? $_smarty_tpl->__("add_products") : $tmp),'but_role'=>"add",'but_target_id'=>"content_".((string)$_smarty_tpl->tpl_vars['data_id']->value),'but_meta'=>"cm-dialog-opener ".((string)$_smarty_tpl->tpl_vars['dialog_opener_meta']->value)), 0);?>
 
         <?php if ($_smarty_tpl->tpl_vars['picker_view']->value) {?>]<?php }
 if (!$_smarty_tpl->tpl_vars['no_container']->value) {?></div><?php }?>

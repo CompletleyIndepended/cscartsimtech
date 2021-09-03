@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2021-09-03 16:57:33
+<?php /* Smarty version Smarty-3.1.21, created on 2021-09-03 18:20:41
          compiled from "C:\OpenServer\domains\cscart\design\backend\templates\common\mainbox.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1456590348613229cddf7fd2-09319780%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:166728625261323d493ee642-31217501%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'tygh',
     ),
   ),
-  'nocache_hash' => '1456590348613229cddf7fd2-09319780',
+  'nocache_hash' => '166728625261323d493ee642-31217501',
   'function' => 
   array (
   ),
@@ -59,9 +59,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21',
-  'unifunc' => 'content_613229ce013f43_60986895',
+  'unifunc' => 'content_61323d494b6af7_34715913',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_613229ce013f43_60986895')) {function content_613229ce013f43_60986895($_smarty_tpl) {?><?php if (!is_callable('smarty_block_inline_script')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.inline_script.php';
+<?php if ($_valid && !is_callable('content_61323d494b6af7_34715913')) {function content_61323d494b6af7_34715913($_smarty_tpl) {?><?php if (!is_callable('smarty_block_inline_script')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.inline_script.php';
 if (!is_callable('smarty_block_hook')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.hook.php';
 if (!is_callable('smarty_block_notes')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.notes.php';
 if (!is_callable('smarty_modifier_sanitize_html')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\modifier.sanitize_html.php';
@@ -133,7 +133,7 @@ $_smarty_tpl->tpl_vars['m']->_loop = true;
                             <li class="divider"></li>
                             <?php } else { ?>
                                 <?php ob_start();?><?php echo htmlspecialchars((($tmp = @$_smarty_tpl->tpl_vars['method']->value)===null||$tmp==='' ? "GET" : $tmp), ENT_QUOTES, 'UTF-8');?>
-<?php $_tmp12=ob_get_clean();?><?php if (fn_check_view_permissions($_smarty_tpl->tpl_vars['m']->value['href'],$_tmp12)) {?>
+<?php $_tmp23=ob_get_clean();?><?php if (fn_check_view_permissions($_smarty_tpl->tpl_vars['m']->value['href'],$_tmp23)) {?>
                                     <li class="<?php if ($_smarty_tpl->tpl_vars['m']->value['js']==true) {?>cm-js<?php }
 if ($_smarty_tpl->getVariable('smarty')->value['foreach']['first_level']['last']) {?> last-item<?php }
 if ($_smarty_tpl->tpl_vars['navigation']->value['dynamic']['active_section']==$_smarty_tpl->tpl_vars['s_id']->value) {?> active<?php }?>"><a href="<?php echo htmlspecialchars(fn_url($_smarty_tpl->tpl_vars['m']->value['href']), ENT_QUOTES, 'UTF-8');?>

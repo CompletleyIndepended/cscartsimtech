@@ -1,22 +1,20 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2021-09-03 18:08:31
+<?php /* Smarty version Smarty-3.1.21, created on 2021-09-03 18:20:37
          compiled from "C:\OpenServer\domains\cscart\design\backend\templates\views\products\update_collection.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:570639425613229e10a3941-94328799%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:16260106961323d45c6d120-55998369%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '360a9eb2d1b809bcb8ded3e764aca6389a4384a4' => 
     array (
       0 => 'C:\\OpenServer\\domains\\cscart\\design\\backend\\templates\\views\\products\\update_collection.tpl',
-      1 => 1630681695,
+      1 => 1630682416,
       2 => 'tygh',
     ),
   ),
-  'nocache_hash' => '570639425613229e10a3941-94328799',
+  'nocache_hash' => '16260106961323d45c6d120-55998369',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.21',
-  'unifunc' => 'content_613229e128aeb3_83832531',
   'variables' => 
   array (
     'collection_data' => 0,
@@ -30,8 +28,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'title' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.21',
+  'unifunc' => 'content_61323d45cbb138_34417898',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_613229e128aeb3_83832531')) {function content_613229e128aeb3_83832531($_smarty_tpl) {?><?php
+<?php if ($_valid && !is_callable('content_61323d45cbb138_34417898')) {function content_61323d45cbb138_34417898($_smarty_tpl) {?><?php
 \Tygh\Languages\Helper::preloadLangVars(array('name','position_short','image','description','creation_date','users','add_recipients_from_users','tt_addons_newsletters_views_newsletters_update_users','delete'));
 ?>
 <?php if ($_smarty_tpl->tpl_vars['collection_data']->value) {?>
@@ -71,7 +71,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <label class="control-label"><?php echo $_smarty_tpl->__("image");?>
 </label>
             <div class="controls">
-                <?php echo $_smarty_tpl->getSubTemplate ("common/attach_images.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('image_name'=>"collections",'image_object_type'=>"collection",'image_pair'=>$_smarty_tpl->tpl_vars['collection_data']->value['main_pair'],'image_object_id'=>$_smarty_tpl->tpl_vars['id']->value,'no_detailed'=>true,'hide_titles'=>false), 0);?>
+                <?php echo $_smarty_tpl->getSubTemplate ("common/attach_images.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('image_name'=>"collection",'image_object_type'=>"collection",'image_pair'=>$_smarty_tpl->tpl_vars['collection_data']->value['main_pair'],'image_object_id'=>$_smarty_tpl->tpl_vars['id']->value,'no_detailed'=>true,'hide_titles'=>false), 0);?>
 
             </div>
         </div>

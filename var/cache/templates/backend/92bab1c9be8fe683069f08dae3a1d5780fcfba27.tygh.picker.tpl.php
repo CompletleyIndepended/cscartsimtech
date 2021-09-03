@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2021-09-03 16:57:55
+<?php /* Smarty version Smarty-3.1.21, created on 2021-09-03 18:20:40
          compiled from "C:\OpenServer\domains\cscart\design\backend\templates\views\products\components\picker\picker.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1989157352613229e3d793a5-09531270%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:110874796561323d484ee3f8-29896535%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'tygh',
     ),
   ),
-  'nocache_hash' => '1989157352613229e3d793a5-09531270',
+  'nocache_hash' => '110874796561323d484ee3f8-29896535',
   'function' => 
   array (
   ),
@@ -52,9 +52,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21',
-  'unifunc' => 'content_613229e3e2a854_14726014',
+  'unifunc' => 'content_61323d4854aa87_78466159',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_613229e3e2a854_14726014')) {function content_613229e3e2a854_14726014($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_to_json')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\modifier.to_json.php';
+<?php if ($_valid && !is_callable('content_61323d4854aa87_78466159')) {function content_61323d4854aa87_78466159($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_to_json')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\modifier.to_json.php';
 ?><?php
 \Tygh\Languages\Helper::preloadLangVars(array('type_to_search_or_click_button','none','advanced_products_search','no_data','delete'));
 ?>
@@ -90,7 +90,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 ">
                 <?php ob_start();
 echo $_smarty_tpl->__("advanced_products_search");
-$_tmp2=ob_get_clean();?><?php echo $_smarty_tpl->getSubTemplate ("pickers/products/picker.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('picker_id'=>"object_picker_advanced_".((string)$_smarty_tpl->tpl_vars['picker_id']->value),'data_id'=>"om",'no_container'=>true,'icon'=>"icon-reorder",'but_text'=>$_tmp2,'show_but_text'=>false,'view_mode'=>"button",'meta'=>"object-picker__advanced-btn object-picker__advanced-btn--products ".((string)$_smarty_tpl->tpl_vars['object_picker_advanced_btn_class']->value)), 0);?>
+$_tmp13=ob_get_clean();?><?php echo $_smarty_tpl->getSubTemplate ("pickers/products/picker.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('picker_id'=>"object_picker_advanced_".((string)$_smarty_tpl->tpl_vars['picker_id']->value),'data_id'=>"om",'no_container'=>true,'icon'=>"icon-reorder",'but_text'=>$_tmp13,'show_but_text'=>false,'view_mode'=>"button",'meta'=>"object-picker__advanced-btn object-picker__advanced-btn--products ".((string)$_smarty_tpl->tpl_vars['object_picker_advanced_btn_class']->value)), 0);?>
 
             </div>
         <?php }?>
@@ -105,7 +105,7 @@ $_tmp2=ob_get_clean();?><?php echo $_smarty_tpl->getSubTemplate ("pickers/produc
                     data-ca-object-picker-escape-html="false"
                     data-ca-object-picker-ajax-url="<?php ob_start();
 if ($_smarty_tpl->tpl_vars['for_current_storefront']->value) {?><?php echo "?for_current_storefront=";?><?php echo (string)$_smarty_tpl->tpl_vars['for_current_storefront']->value;?><?php }
-$_tmp3=ob_get_clean();?><?php echo htmlspecialchars(fn_url("products.get_products_list".$_tmp3), ENT_QUOTES, 'UTF-8');?>
+$_tmp14=ob_get_clean();?><?php echo htmlspecialchars(fn_url("products.get_products_list".$_tmp14), ENT_QUOTES, 'UTF-8');?>
 "
                     data-ca-object-picker-ajax-delay="250"
                     data-ca-object-picker-template-result-selector="#object_picker_result_template_<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['picker_id']->value, ENT_QUOTES, 'UTF-8');?>
@@ -139,7 +139,7 @@ $_tmp3=ob_get_clean();?><?php echo htmlspecialchars(fn_url("products.get_product
                         data-ca-object-picker-allow-clear="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['allow_clear']->value, ENT_QUOTES, 'UTF-8');?>
 "
                         data-ca-object-picker-predefined-variants="<?php ob_start();?><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['empty_variant_text']->value, ENT_QUOTES, 'UTF-8');?>
-<?php $_tmp4=ob_get_clean();?><?php echo htmlspecialchars(smarty_modifier_to_json(array(array("id"=>0,"text"=>$_tmp4))), ENT_QUOTES, 'UTF-8');?>
+<?php $_tmp15=ob_get_clean();?><?php echo htmlspecialchars(smarty_modifier_to_json(array(array("id"=>0,"text"=>$_tmp15))), ENT_QUOTES, 'UTF-8');?>
 "
                     <?php }?>
             >
@@ -181,8 +181,8 @@ $_smarty_tpl->tpl_vars['item_id']->_loop = true;
     <div class="object-picker__result object-picker__result--products <?php echo htmlspecialchars($_smarty_tpl->tpl_vars['result_class']->value, ENT_QUOTES, 'UTF-8');?>
 ">
         <?php ob_start();?><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['result_title_pre']->value, ENT_QUOTES, 'UTF-8');?>
-<?php $_tmp5=ob_get_clean();?><?php ob_start();?><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['result_title_post']->value, ENT_QUOTES, 'UTF-8');?>
-<?php $_tmp6=ob_get_clean();?><?php echo $_smarty_tpl->getSubTemplate ("views/products/components/picker/item_extended.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('type'=>"result",'title_pre'=>$_tmp5,'title_post'=>$_tmp6), 0);?>
+<?php $_tmp16=ob_get_clean();?><?php ob_start();?><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['result_title_post']->value, ENT_QUOTES, 'UTF-8');?>
+<?php $_tmp17=ob_get_clean();?><?php echo $_smarty_tpl->getSubTemplate ("views/products/components/picker/item_extended.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('type'=>"result",'title_pre'=>$_tmp16,'title_post'=>$_tmp17), 0);?>
 
     </div>
 <?php echo '</script'; ?>
@@ -198,8 +198,8 @@ $_smarty_tpl->tpl_vars['item_id']->_loop = true;
 
             <?php }?>
             <?php ob_start();?><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['selection_title_pre']->value, ENT_QUOTES, 'UTF-8');?>
-<?php $_tmp7=ob_get_clean();?><?php ob_start();?><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['selection_title_post']->value, ENT_QUOTES, 'UTF-8');?>
-<?php $_tmp8=ob_get_clean();?><?php echo $_smarty_tpl->getSubTemplate ("views/products/components/picker/item_extended.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('type'=>"selection",'title_pre'=>$_tmp7,'title_post'=>$_tmp8), 0);?>
+<?php $_tmp18=ob_get_clean();?><?php ob_start();?><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['selection_title_post']->value, ENT_QUOTES, 'UTF-8');?>
+<?php $_tmp19=ob_get_clean();?><?php echo $_smarty_tpl->getSubTemplate ("views/products/components/picker/item_extended.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('type'=>"selection",'title_pre'=>$_tmp18,'title_post'=>$_tmp19), 0);?>
 
             <?php echo $_smarty_tpl->getSubTemplate ("buttons/button.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('but_role'=>"button-icon",'but_meta'=>"btn cm-object-picker-remove-object object-picker__products-delete",'but_icon'=>"icon-remove object-picker__products-delete-icon",'title'=>$_smarty_tpl->__("delete")), 0);?>
 
@@ -212,8 +212,8 @@ $_smarty_tpl->tpl_vars['item_id']->_loop = true;
 " data-no-defer="true" data-no-execute="§">
         <div class="cm-object-picker-object object-picker__selection object-picker__selection--products">
             <?php ob_start();?><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['selection_title_pre']->value, ENT_QUOTES, 'UTF-8');?>
-<?php $_tmp9=ob_get_clean();?><?php ob_start();?><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['selection_title_post']->value, ENT_QUOTES, 'UTF-8');?>
-<?php $_tmp10=ob_get_clean();?><?php echo $_smarty_tpl->getSubTemplate ("views/products/components/picker/item.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('type'=>"selection",'title_pre'=>$_tmp9,'title_post'=>$_tmp10), 0);?>
+<?php $_tmp20=ob_get_clean();?><?php ob_start();?><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['selection_title_post']->value, ENT_QUOTES, 'UTF-8');?>
+<?php $_tmp21=ob_get_clean();?><?php echo $_smarty_tpl->getSubTemplate ("views/products/components/picker/item.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('type'=>"selection",'title_pre'=>$_tmp20,'title_post'=>$_tmp21), 0);?>
 
         </div>
     <?php echo '</script'; ?>
