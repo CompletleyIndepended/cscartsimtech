@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2021-09-03 16:06:00
+<?php /* Smarty version Smarty-3.1.21, created on 2021-09-03 16:57:31
          compiled from "C:\OpenServer\domains\cscart\design\backend\templates\views\products\manage_collections.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:132363637261321db806d248-24356277%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1307102741613229cbeadc30-58959712%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'c75b32757f6ff4e1be6a9556775a4fb038c21860' => 
     array (
       0 => 'C:\\OpenServer\\domains\\cscart\\design\\backend\\templates\\views\\products\\manage_collections.tpl',
-      1 => 1630674354,
+      1 => 1630677372,
       2 => 'tygh',
     ),
   ),
-  'nocache_hash' => '132363637261321db806d248-24356277',
+  'nocache_hash' => '1307102741613229cbeadc30-58959712',
   'function' => 
   array (
   ),
@@ -34,9 +34,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21',
-  'unifunc' => 'content_61321db80f28c7_72189865',
+  'unifunc' => 'content_613229cc0169e5_15097487',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_61321db80f28c7_72189865')) {function content_61321db80f28c7_72189865($_smarty_tpl) {?><?php if (!is_callable('smarty_block_hook')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.hook.php';
+<?php if ($_valid && !is_callable('content_613229cc0169e5_15097487')) {function content_613229cc0169e5_15097487($_smarty_tpl) {?><?php if (!is_callable('smarty_block_hook')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.hook.php';
 ?><?php
 \Tygh\Languages\Helper::preloadLangVars(array('position','name','status','edit','delete','status','no_data'));
 ?>
@@ -142,8 +142,6 @@ $_smarty_tpl->tpl_vars['collection']->_loop = true;
 ][position]" value="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['collection']->value['position'], ENT_QUOTES, 'UTF-8');?>
 " size="3" class="input-micro">
                         </td>
-                        <?php echo htmlspecialchars(fn_print_die("collections_data[".((string)$_smarty_tpl->tpl_vars['collection']->value['collection_id'])."][position]"), ENT_QUOTES, 'UTF-8');?>
-
                     
                         <td class="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['no_hide_input']->value, ENT_QUOTES, 'UTF-8');?>
 " data-th="name">
@@ -157,7 +155,7 @@ $_smarty_tpl->tpl_vars['collection']->_loop = true;
                                 <li><?php smarty_template_function_btn($_smarty_tpl,array('type'=>"list",'text'=>$_smarty_tpl->__("edit"),'href'=>"products.update_collection?collection_id=".((string)$_smarty_tpl->tpl_vars['collection']->value['collection_id'])));?>
 </li>
                             <?php if ($_smarty_tpl->tpl_vars['allow_save']->value) {?>
-                                <li><?php smarty_template_function_btn($_smarty_tpl,array('type'=>"list",'class'=>"cm-confirm",'text'=>$_smarty_tpl->__("delete"),'href'=>"products.collection_delete?collection_id=".((string)$_smarty_tpl->tpl_vars['collection']->value['collection_id']),'method'=>"POST"));?>
+                                <li><?php smarty_template_function_btn($_smarty_tpl,array('type'=>"list",'class'=>"cm-confirm",'text'=>$_smarty_tpl->__("delete"),'href'=>"products.delete_collection?collection_id=".((string)$_smarty_tpl->tpl_vars['collection']->value['collection_id']),'method'=>"POST"));?>
 </li>
                             <?php }?>
                             <?php list($_capture_buffer, $_capture_assign, $_capture_append) = array_pop($_smarty_tpl->_capture_stack[0]);
@@ -186,6 +184,8 @@ if (!empty($_capture_buffer)) {
  if (isset( $_capture_append)) $_smarty_tpl->append( $_capture_append, ob_get_contents());
  Smarty::$_smarty_vars['capture'][$_capture_buffer]=ob_get_clean();
 } else $_smarty_tpl->capture_error();?>
+              <?php echo $_smarty_tpl->getSubTemplate ("common/context_menu_wrapper.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('form'=>"collections_form",'object'=>"collections",'items'=>Smarty::$_smarty_vars['capture']['collections_table'],'has_permissions'=>$_smarty_tpl->tpl_vars['has_permission']->value), 0);?>
+
         <?php } else { ?>
             <p class = "no-items"><?php echo $_smarty_tpl->__("no_data");?>
 </p>
@@ -227,8 +227,7 @@ if (!empty($_capture_buffer)) {
  Smarty::$_smarty_vars['capture'][$_capture_buffer]=ob_get_clean();
 } else $_smarty_tpl->capture_error();?>
 
-        <?php echo $_smarty_tpl->getSubTemplate ("common/context_menu_wrapper.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('form'=>"collections_form",'object'=>"collections",'items'=>Smarty::$_smarty_vars['capture']['collections_table'],'has_permissions'=>$_smarty_tpl->tpl_vars['has_permission']->value), 0);?>
-                      
+                            
         </form>
 <?php list($_capture_buffer, $_capture_assign, $_capture_append) = array_pop($_smarty_tpl->_capture_stack[0]);
 if (!empty($_capture_buffer)) {

@@ -4162,7 +4162,6 @@ function fn_get_collections($params = [], $items_per_page = 0, $lang_code = CART
     }
 
     return array($collections, $params);
-
 }
 
 function fn_update_collection($data, $collection_id, $lang_code = DESCR_SL)
@@ -4194,6 +4193,7 @@ function fn_update_collection($data, $collection_id, $lang_code = DESCR_SL)
     fn_collection_delete_links($collection_id);
     fn_collection_add_links($collection_id, $product_ids);
 
+// fn_print_die($_REQUEST);
     return $collection_id;
 }
 

@@ -83,7 +83,6 @@
                         <td>
                             <input type="text" name="collections_data[{$collection.collection_id}][position]" value="{$collection.position}" size="3" class="input-micro">
                         </td>
-                        {"collections_data[{$collection.collection_id}][position]"|fn_print_die}
                     
                         <td class="{$no_hide_input}" data-th="name">
                             <a class="row-status" href="{"products.update_collection?collection_id=`$collection.collection_id`"|fn_url}">{$collection.collection}</a>
@@ -93,7 +92,7 @@
                             {capture name="tools_list"}
                                 <li>{btn type="list" text=__("edit") href="products.update_collection?collection_id=`$collection.collection_id`"}</li>
                             {if $allow_save}
-                                <li>{btn type="list" class="cm-confirm" text=__("delete") href="products.collection_delete?collection_id=`$collection.collection_id`" method="POST"}</li>
+                                <li>{btn type="list" class="cm-confirm" text=__("delete") href="products.delete_collection?collection_id=`$collection.collection_id`" method="POST"}</li>
                             {/if}
                             {/capture}
                             <div class="hidden-tools">
@@ -108,6 +107,12 @@
                     </table>
                 </div>
             {/capture}
+              {include file="common/context_menu_wrapper.tpl"
+        form="collections_form"
+        object="collections"
+        items=$smarty.capture.collections_table
+        has_permissions=$has_permission
+        }
         {else}
             <p class = "no-items">{__("no_data")}</p>
         {/if}
@@ -128,12 +133,7 @@
             {include file="common/tools.tpl" tool_href="products.add_collection" prefix="top" hide_tools="true" title="Добавить коллекцию" icon="icon-plus"}
         {/capture}
 
-        {include file="common/context_menu_wrapper.tpl"
-        form="collections_form"
-        object="collections"
-        items=$smarty.capture.collections_table
-        has_permissions=$has_permission
-        }                      
+                            
         </form>
 {/capture}
 
