@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2021-09-03 18:30:02
+<?php /* Smarty version Smarty-3.1.21, created on 2021-09-04 12:20:04
          compiled from "C:\OpenServer\domains\cscart\design\themes\bright_theme\templates\blocks\my_account.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:33394549861323f7a1e3b52-04087877%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7eb1e0057b94c232b7c00acfcdccd9a0c6e003c7' => 
     array (
       0 => 'C:\\OpenServer\\domains\\cscart\\design\\themes\\bright_theme\\templates\\blocks\\my_account.tpl',
-      1 => 1629025919,
+      1 => 1630747199,
       2 => 'tygh',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.21',
+  'unifunc' => 'content_61323f7a2e6d73_65510163',
   'variables' => 
   array (
     'runtime' => 0,
@@ -30,8 +32,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'return_current_url' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.21',
-  'unifunc' => 'content_61323f7a2e6d73_65510163',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_61323f7a2e6d73_65510163')) {function content_61323f7a2e6d73_65510163($_smarty_tpl) {?><?php if (!is_callable('smarty_function_live_edit')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\function.live_edit.php';
 if (!is_callable('smarty_block_hook')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.hook.php';
@@ -97,6 +97,8 @@ if (!empty($_capture_buffer)) {
 " rel="nofollow"><?php echo $_smarty_tpl->__("downloads");?>
 </a></li>
                 <?php }?>
+                <li class="ty-account-info__item ty-dropdown-box__item"><a class="ty-account-info__a underlined" href="<?php echo htmlspecialchars(fn_url("products.collections"), ENT_QUOTES, 'UTF-8');?>
+" rel="nofollow">Коллекции</a></li>
             <?php } elseif ($_smarty_tpl->tpl_vars['user_data']->value['firstname']||$_smarty_tpl->tpl_vars['user_data']->value['lastname']) {?>
                 <li class="ty-account-info__item  ty-dropdown-box__item ty-account-info__name"><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['user_data']->value['firstname'], ENT_QUOTES, 'UTF-8');?>
  <?php echo htmlspecialchars($_smarty_tpl->tpl_vars['user_data']->value['lastname'], ENT_QUOTES, 'UTF-8');?>
@@ -251,6 +253,8 @@ if (!empty($_capture_buffer)) {
 " rel="nofollow"><?php echo $_smarty_tpl->__("downloads");?>
 </a></li>
                 <?php }?>
+                <li class="ty-account-info__item ty-dropdown-box__item"><a class="ty-account-info__a underlined" href="<?php echo htmlspecialchars(fn_url("products.collections"), ENT_QUOTES, 'UTF-8');?>
+" rel="nofollow">Коллекции</a></li>
             <?php } elseif ($_smarty_tpl->tpl_vars['user_data']->value['firstname']||$_smarty_tpl->tpl_vars['user_data']->value['lastname']) {?>
                 <li class="ty-account-info__item  ty-dropdown-box__item ty-account-info__name"><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['user_data']->value['firstname'], ENT_QUOTES, 'UTF-8');?>
  <?php echo htmlspecialchars($_smarty_tpl->tpl_vars['user_data']->value['lastname'], ENT_QUOTES, 'UTF-8');?>
