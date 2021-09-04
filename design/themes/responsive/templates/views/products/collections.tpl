@@ -6,10 +6,6 @@
         {include file="common/pagination.tpl"}
     {/if}
 
-    {if !$no_sorting}
-        {include file="views/products/components/sorting.tpl"}
-    {/if}
-
     {if !$show_empty}
         {split data=$collections size=$columns|default:"2" assign="splitted_collections"}
     {else}
@@ -23,8 +19,8 @@
 
     <div class="grid-list">
         {strip}
-            {foreach from=$splitted_collections item="sollections"}
-                {foreach from=$sollections item="collection"}
+            {foreach from=$splitted_collections item="scollections"}
+                {foreach from=$scollections item="collection"}
                     <div class="ty-column{$columns}">
                         {if $collection}
                             {assign var="obj_id" value=$collection.collection_id}
@@ -32,7 +28,7 @@
                             
                             <div class="ty-grid-list__item ty-quick-view-button__wrapper">
                                 <div class="ty-grid-list__image">
-                                    <a href="{"products.collections?collection_id={$collection.collection_id}"|fn_url}">
+                                    <a href="{"products.collection?collection_id={$collection.collection_id}"|fn_url}">
                                         {include 
                                         file="common/image.tpl" 
                                         no_ids=true 
@@ -45,7 +41,7 @@
                                 </div>
                                 <div class="ty-grid-list__item-name">
                                     <bdi>
-                                        <a href="{"products.collections?collection_id={$collection.collection_id}"|fn_url}" class="product-title" title="{$collection.collection}">{$collection.collection}</a>    
+                                        <a href="{"products.collection?collection_id={$collection.collection_id}"|fn_url}" class="product-title" title="{$collection.collection}">{$collection.collection}</a>    
                                     </bdi>
                                 </div>
                             </div>

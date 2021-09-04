@@ -281,14 +281,16 @@ if ($mode == 'search') {
 
     $params['user_id'] = Tygh::$app['session']['auth']['user_id'];     
 
-    list($collection, $search) = fn_get_collections($params, Registry::get('settings.Appearance.products_per_page'), CART_LANGUAGE);
-    if (isset($search['page']) && ($search['page'] > 1) && empty($products)) {
-        return array(CONTROLLER_STATUS_NO_PAGE);
-    }
+    list($collections, $search) = fn_get_collections($params, Registry::get('settings.Appearance.products_per_page'), CART_LANGUAGE);
+    
     Tygh::$app['view']->assign('is_selected_filters', !empty($params['features_hash']));
 
-    Tygh::$app['view']->assign('collection', $collection);
+    Tygh::$app['view']->assign('collections', $collections);
     Tygh::$app['view']->assign('search', $search);
+    Tygh::$app['view']->assign('columns', 3);
+
+
+    
 
     fn_add_breadcrumb("Коллекции");
         
