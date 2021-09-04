@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2021-09-03 18:20:43
+<?php /* Smarty version Smarty-3.1.21, created on 2021-09-04 18:34:33
          compiled from "C:\OpenServer\domains\cscart\design\backend\templates\common\comet.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:66667284561323d4bd2b4e3-10246435%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:171761501461339209be5bd6-08058583%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,15 +11,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'tygh',
     ),
   ),
-  'nocache_hash' => '66667284561323d4bd2b4e3-10246435',
+  'nocache_hash' => '171761501461339209be5bd6-08058583',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21',
-  'unifunc' => 'content_61323d4bd2e496_78830110',
+  'unifunc' => 'content_61339209be93a6_24676143',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_61323d4bd2e496_78830110')) {function content_61323d4bd2e496_78830110($_smarty_tpl) {?><?php
+<?php if ($_valid && !is_callable('content_61339209be93a6_24676143')) {function content_61339209be93a6_24676143($_smarty_tpl) {?><?php
 \Tygh\Languages\Helper::preloadLangVars(array('processing'));
 ?>
 <a id="comet_container_controller" data-backdrop="static" data-keyboard="false" href="#comet_control" data-toggle="modal" class="hide"></a>
