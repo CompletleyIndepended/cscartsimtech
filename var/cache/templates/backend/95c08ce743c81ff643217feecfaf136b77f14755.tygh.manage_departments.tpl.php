@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2021-09-04 18:34:29
-         compiled from "C:\OpenServer\domains\cscart\design\backend\templates\views\products\manage_collections.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:12608831546133920581b758-11561945%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.21, created on 2021-09-04 20:32:29
+         compiled from "C:\OpenServer\domains\cscart\design\backend\templates\views\profiles\manage_departments.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:17009465576133adad575742-66458368%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'c75b32757f6ff4e1be6a9556775a4fb038c21860' => 
+    '95c08ce743c81ff643217feecfaf136b77f14755' => 
     array (
-      0 => 'C:\\OpenServer\\domains\\cscart\\design\\backend\\templates\\views\\products\\manage_collections.tpl',
-      1 => 1630677372,
+      0 => 'C:\\OpenServer\\domains\\cscart\\design\\backend\\templates\\views\\profiles\\manage_departments.tpl',
+      1 => 1630776629,
       2 => 'tygh',
     ),
   ),
-  'nocache_hash' => '12608831546133920581b758-11561945',
+  'nocache_hash' => '17009465576133adad575742-66458368',
   'function' => 
   array (
   ),
@@ -19,14 +19,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
     'config' => 0,
     'search' => 0,
-    'collections' => 0,
+    'departments' => 0,
     'has_permission' => 0,
     'banner_statuses' => 0,
     'c_url' => 0,
     'rev' => 0,
     'c_icon' => 0,
     'c_dummy' => 0,
-    'collection' => 0,
+    'department' => 0,
     'allow_save' => 0,
     'no_hide_input' => 0,
     'page_title' => 0,
@@ -34,9 +34,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21',
-  'unifunc' => 'content_61339205883039_23894709',
+  'unifunc' => 'content_6133adad5c5fc3_97829682',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_61339205883039_23894709')) {function content_61339205883039_23894709($_smarty_tpl) {?><?php if (!is_callable('smarty_block_hook')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.hook.php';
+<?php if ($_valid && !is_callable('content_6133adad5c5fc3_97829682')) {function content_6133adad5c5fc3_97829682($_smarty_tpl) {?><?php if (!is_callable('smarty_block_hook')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.hook.php';
 ?><?php
 \Tygh\Languages\Helper::preloadLangVars(array('position','name','status','edit','delete','status','no_data'));
 ?>
@@ -45,22 +45,22 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php $_smarty_tpl->_capture_stack[0][] = array("mainbox", null, null); ob_start(); ?>
 
     <form action="<?php echo htmlspecialchars(fn_url(''), ENT_QUOTES, 'UTF-8');?>
-" method="post" id="collections_form" name="collections_form" enctype="multipart/form-data">
+" method="post" id="departments_form1" name="departments_form1" enctype="multipart/form-data">
         <input type="hidden" name="fake" value="1" />
-        <?php echo $_smarty_tpl->getSubTemplate ("common/pagination.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('save_current_page'=>true,'save_current_url'=>true,'div_id'=>"pagination_contents_collections"), 0);?>
+        <?php echo $_smarty_tpl->getSubTemplate ("common/pagination.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('save_current_page'=>true,'save_current_url'=>true,'div_id'=>"pagination_contents_departments"), 0);?>
 
 
         <?php $_smarty_tpl->tpl_vars['c_url'] = new Smarty_variable(fn_query_remove($_smarty_tpl->tpl_vars['config']->value['current_url'],"sort_by","sort_order"), null, 0);?>
 
-        <?php $_smarty_tpl->tpl_vars['rev'] = new Smarty_variable((($tmp = @$_REQUEST['content_id'])===null||$tmp==='' ? "pagination_contents_collections" : $tmp), null, 0);?>
+        <?php $_smarty_tpl->tpl_vars['rev'] = new Smarty_variable((($tmp = @$_REQUEST['content_id'])===null||$tmp==='' ? "pagination_contents_departments" : $tmp), null, 0);?>
         <?php $_smarty_tpl->tpl_vars['c_icon'] = new Smarty_variable("<i class=\"icon-".((string)$_smarty_tpl->tpl_vars['search']->value['sort_order_rev'])."\"></i>", null, 0);?>
         <?php $_smarty_tpl->tpl_vars['c_dummy'] = new Smarty_variable("<i class=\"icon-dummy\"></i>", null, 0);?>
         
         <?php $_smarty_tpl->tpl_vars['banner_statuses'] = new Smarty_variable(fn_get_default_statuses('',true), null, 0);?>
-        <?php $_smarty_tpl->tpl_vars['has_permission'] = new Smarty_variable(fn_check_permissions("collections","update_status","admin","POST"), null, 0);?>
+        <?php $_smarty_tpl->tpl_vars['has_permission'] = new Smarty_variable(fn_check_permissions("departments","update_status","admin","POST"), null, 0);?>
 
-        <?php if ($_smarty_tpl->tpl_vars['collections']->value) {?>
-            <?php $_smarty_tpl->_capture_stack[0][] = array("collections_table", null, null); ob_start(); ?>
+        <?php if ($_smarty_tpl->tpl_vars['departments']->value) {?>
+            <?php $_smarty_tpl->_capture_stack[0][] = array("departments_table", null, null); ob_start(); ?>
                 <div class="table-responsive-wrapper longtap-selection">
                     <table class="table table-middle table--relative table-responsive">
                     <thead
@@ -116,12 +116,12 @@ echo $_smarty_tpl->tpl_vars['c_dummy']->value;
                             </th>
                         </tr>
                     </thead>
-                    <?php  $_smarty_tpl->tpl_vars['collection'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['collection']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['collections']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['collection']->key => $_smarty_tpl->tpl_vars['collection']->value) {
-$_smarty_tpl->tpl_vars['collection']->_loop = true;
+                    <?php  $_smarty_tpl->tpl_vars['department'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['department']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['departments']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['department']->key => $_smarty_tpl->tpl_vars['department']->value) {
+$_smarty_tpl->tpl_vars['department']->_loop = true;
 ?>
-                    <tr class="cm-row-status-<?php echo htmlspecialchars(mb_strtolower($_smarty_tpl->tpl_vars['collection']->value['status'], 'UTF-8'), ENT_QUOTES, 'UTF-8');?>
+                    <tr class="cm-row-status-<?php echo htmlspecialchars(mb_strtolower($_smarty_tpl->tpl_vars['department']->value['status'], 'UTF-8'), ENT_QUOTES, 'UTF-8');?>
  cm-longtap-target">
                         <?php $_smarty_tpl->tpl_vars['allow_save'] = new Smarty_variable(true, null, 0);?>
 
@@ -132,30 +132,30 @@ $_smarty_tpl->tpl_vars['collection']->_loop = true;
                         <?php }?>
 
                         <td class="left mobile-hide">
-                            <input type="checkbox" name="collections_ids[]" value="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['collection']->value['collection_id'], ENT_QUOTES, 'UTF-8');?>
+                            <input type="checkbox" name="departments_ids[]" value="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['department']->value['department_id'], ENT_QUOTES, 'UTF-8');?>
 " class="cm-item <?php echo htmlspecialchars($_smarty_tpl->tpl_vars['no_hide_input']->value, ENT_QUOTES, 'UTF-8');?>
 " />
                         </td>
 
                         <td>
-                            <input type="text" name="collections_data[<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['collection']->value['collection_id'], ENT_QUOTES, 'UTF-8');?>
-][position]" value="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['collection']->value['position'], ENT_QUOTES, 'UTF-8');?>
+                            <input type="text" name="departments_data[<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['department']->value['department_id'], ENT_QUOTES, 'UTF-8');?>
+][position]" value="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['department']->value['position'], ENT_QUOTES, 'UTF-8');?>
 " size="3" class="input-micro">
                         </td>
                     
                         <td class="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['no_hide_input']->value, ENT_QUOTES, 'UTF-8');?>
 " data-th="name">
-                            <a class="row-status" href="<?php echo htmlspecialchars(fn_url("products.update_collection?collection_id=".((string)$_smarty_tpl->tpl_vars['collection']->value['collection_id'])), ENT_QUOTES, 'UTF-8');?>
-"><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['collection']->value['collection'], ENT_QUOTES, 'UTF-8');?>
+                            <a class="row-status" href="<?php echo htmlspecialchars(fn_url("profiles.update_department?department_id=".((string)$_smarty_tpl->tpl_vars['department']->value['department_id'])), ENT_QUOTES, 'UTF-8');?>
+"><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['department']->value['department'], ENT_QUOTES, 'UTF-8');?>
 </a>
                         </td>
 
                         <td width="6%" class="mobile-hide">
                             <?php $_smarty_tpl->_capture_stack[0][] = array("tools_list", null, null); ob_start(); ?>
-                                <li><?php smarty_template_function_btn($_smarty_tpl,array('type'=>"list",'text'=>$_smarty_tpl->__("edit"),'href'=>"products.update_collection?collection_id=".((string)$_smarty_tpl->tpl_vars['collection']->value['collection_id'])));?>
+                                <li><?php smarty_template_function_btn($_smarty_tpl,array('type'=>"list",'text'=>$_smarty_tpl->__("edit"),'href'=>"profiles.update_department?department_id=".((string)$_smarty_tpl->tpl_vars['department']->value['department_id'])));?>
 </li>
                             <?php if ($_smarty_tpl->tpl_vars['allow_save']->value) {?>
-                                <li><?php smarty_template_function_btn($_smarty_tpl,array('type'=>"list",'class'=>"cm-confirm",'text'=>$_smarty_tpl->__("delete"),'href'=>"products.delete_collection?collection_id=".((string)$_smarty_tpl->tpl_vars['collection']->value['collection_id']),'method'=>"POST"));?>
+                                <li><?php smarty_template_function_btn($_smarty_tpl,array('type'=>"list",'class'=>"cm-confirm",'text'=>$_smarty_tpl->__("delete"),'href'=>"profiles.delete_department?department_id=".((string)$_smarty_tpl->tpl_vars['department']->value['department_id']),'method'=>"POST"));?>
 </li>
                             <?php }?>
                             <?php list($_capture_buffer, $_capture_assign, $_capture_append) = array_pop($_smarty_tpl->_capture_stack[0]);
@@ -171,7 +171,7 @@ if (!empty($_capture_buffer)) {
                         </td>
                         <td width="10%" class="right" data-th="<?php echo $_smarty_tpl->__("status");?>
 ">
-                            <?php echo $_smarty_tpl->getSubTemplate ("common/select_popup.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('id'=>$_smarty_tpl->tpl_vars['collection']->value['collection_id'],'status'=>$_smarty_tpl->tpl_vars['collection']->value['status'],'hidden'=>false,'object_id_name'=>"banner_id",'table'=>"collections",'popup_additional_class'=>((string)$_smarty_tpl->tpl_vars['no_hide_input']->value)." dropleft"), 0);?>
+                            <?php echo $_smarty_tpl->getSubTemplate ("common/select_popup.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('id'=>$_smarty_tpl->tpl_vars['department']->value['department_id'],'status'=>$_smarty_tpl->tpl_vars['department']->value['status'],'hidden'=>false,'object_id_name'=>"banner_id",'table'=>"departments",'popup_additional_class'=>((string)$_smarty_tpl->tpl_vars['no_hide_input']->value)." dropleft"), 0);?>
 
                         </td>
                     </tr>
@@ -184,20 +184,20 @@ if (!empty($_capture_buffer)) {
  if (isset( $_capture_append)) $_smarty_tpl->append( $_capture_append, ob_get_contents());
  Smarty::$_smarty_vars['capture'][$_capture_buffer]=ob_get_clean();
 } else $_smarty_tpl->capture_error();?>
-              <?php echo $_smarty_tpl->getSubTemplate ("common/context_menu_wrapper.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('form'=>"collections_form",'object'=>"collections",'items'=>Smarty::$_smarty_vars['capture']['collections_table'],'has_permissions'=>$_smarty_tpl->tpl_vars['has_permission']->value), 0);?>
+              <?php echo $_smarty_tpl->getSubTemplate ("common/context_menu_wrapper.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('form'=>"departments_form1",'object'=>"departments",'items'=>Smarty::$_smarty_vars['capture']['departments_table'],'has_permissions'=>$_smarty_tpl->tpl_vars['has_permission']->value), 0);?>
 
         <?php } else { ?>
             <p class = "no-items"><?php echo $_smarty_tpl->__("no_data");?>
 </p>
         <?php }?>
 
-        <?php echo $_smarty_tpl->getSubTemplate ("common/pagination.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('div_id'=>"pagination_contents_collections"), 0);?>
+        <?php echo $_smarty_tpl->getSubTemplate ("common/pagination.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('div_id'=>"pagination_contents_departments"), 0);?>
 
 
         <?php $_smarty_tpl->_capture_stack[0][] = array("buttons", null, null); ob_start(); ?>
             <?php $_smarty_tpl->_capture_stack[0][] = array("tools_list", null, null); ob_start(); ?>
-                <?php if ($_smarty_tpl->tpl_vars['collections']->value) {?>
-                    <li><?php smarty_template_function_btn($_smarty_tpl,array('type'=>"delete_selected",'dispatch'=>"dispatch[products.delete_collections]",'form'=>"collections_form"));?>
+                <?php if ($_smarty_tpl->tpl_vars['departments']->value) {?>
+                    <li><?php smarty_template_function_btn($_smarty_tpl,array('type'=>"delete_selected",'dispatch'=>"dispatch[profiles.delete_departments]",'form'=>"departments_form1"));?>
 </li>
                 <?php }?>
             <?php list($_capture_buffer, $_capture_assign, $_capture_append) = array_pop($_smarty_tpl->_capture_stack[0]);
@@ -208,7 +208,7 @@ if (!empty($_capture_buffer)) {
 } else $_smarty_tpl->capture_error();?>
             <?php smarty_template_function_dropdown($_smarty_tpl,array('content'=>Smarty::$_smarty_vars['capture']['tools_list'],'class'=>"mobile-hide"));?>
 
-            <?php echo $_smarty_tpl->getSubTemplate ("buttons/save.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('but_name'=>"dispatch[products.update_collections]",'but_role'=>"action",'but_target_form'=>"collections_form",'but_meta'=>"cm-submit"), 0);?>
+            <?php echo $_smarty_tpl->getSubTemplate ("buttons/save.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('but_name'=>"dispatch[profiles.update_department]",'but_role'=>"action",'but_target_form'=>"departments_form1",'but_meta'=>"cm-submit"), 0);?>
 
         <?php list($_capture_buffer, $_capture_assign, $_capture_append) = array_pop($_smarty_tpl->_capture_stack[0]);
 if (!empty($_capture_buffer)) {
@@ -218,7 +218,7 @@ if (!empty($_capture_buffer)) {
 } else $_smarty_tpl->capture_error();?>
 
         <?php $_smarty_tpl->_capture_stack[0][] = array("adv_buttons", null, null); ob_start(); ?>
-            <?php echo $_smarty_tpl->getSubTemplate ("common/tools.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('tool_href'=>"products.add_collection",'prefix'=>"top",'hide_tools'=>"true",'title'=>"Добавить коллекцию",'icon'=>"icon-plus"), 0);?>
+            <?php echo $_smarty_tpl->getSubTemplate ("common/tools.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('tool_href'=>"profiles.add_departments",'prefix'=>"top",'hide_tools'=>"true",'title'=>"Добавить коллекцию",'icon'=>"icon-plus"), 0);?>
 
         <?php list($_capture_buffer, $_capture_assign, $_capture_append) = array_pop($_smarty_tpl->_capture_stack[0]);
 if (!empty($_capture_buffer)) {
@@ -236,11 +236,11 @@ if (!empty($_capture_buffer)) {
  Smarty::$_smarty_vars['capture'][$_capture_buffer]=ob_get_clean();
 } else $_smarty_tpl->capture_error();?>
 
-<?php $_smarty_tpl->smarty->_tag_stack[] = array('hook', array('name'=>"collections:manage_mainbox_params")); $_block_repeat=true; echo smarty_block_hook(array('name'=>"collections:manage_mainbox_params"), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>
+<?php $_smarty_tpl->smarty->_tag_stack[] = array('hook', array('name'=>"departments:manage_mainbox_params")); $_block_repeat=true; echo smarty_block_hook(array('name'=>"departments:manage_mainbox_params"), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>
 
-    <?php $_smarty_tpl->tpl_vars['page_title'] = new Smarty_variable("Коллекция", null, 0);?>
+    <?php $_smarty_tpl->tpl_vars['page_title'] = new Smarty_variable("Отделы", null, 0);?>
     <?php $_smarty_tpl->tpl_vars['select_languages'] = new Smarty_variable(true, null, 0);?>
-<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_block_hook(array('name'=>"collections:manage_mainbox_params"), $_block_content, $_smarty_tpl, $_block_repeat);  } array_pop($_smarty_tpl->smarty->_tag_stack);?>
+<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_block_hook(array('name'=>"departments:manage_mainbox_params"), $_block_content, $_smarty_tpl, $_block_repeat);  } array_pop($_smarty_tpl->smarty->_tag_stack);?>
 
 
 <?php echo $_smarty_tpl->getSubTemplate ("common/mainbox.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('title'=>$_smarty_tpl->tpl_vars['page_title']->value,'content'=>Smarty::$_smarty_vars['capture']['mainbox'],'buttons'=>Smarty::$_smarty_vars['capture']['buttons'],'adv_buttons'=>Smarty::$_smarty_vars['capture']['adv_buttons'],'select_languages'=>$_smarty_tpl->tpl_vars['select_languages']->value), 0);?>
