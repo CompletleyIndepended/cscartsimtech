@@ -4314,6 +4314,10 @@ function fn_get_departments($params = [], $items_per_page = 0, $lang_code = CART
     foreach ($departments as $department_id => $department) {
        $departments[$department_id]['main_pair'] = !empty($images[$department_id]) ? reset($images[$department_id]) : array();
     }
+    // fn_print_die($departments[$department_id]['main_pair']['icon']['image_path']);
+    db_query("INSERT INTO ?:departments_descriptions ?e",[
+        'logo_img' => $departments[$department_id]['main_pair']['icon']['image_path']
+    ]);
 
     return array($departments, $params);
 }
