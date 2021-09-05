@@ -107,7 +107,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } elseif ($mode === 'delete_department') {
         $department_id = !empty($_REQUEST['department_id']) ? $_REQUEST['department_id'] : 0;
         fn_delete_department($department_id);
-        $suffix = ".manage_departments";
+        $suffix = ".manage_department";
     } elseif ($mode === 'delete_departments') {
         // fn_print_die($_REQUEST);
         if (!empty($_REQUEST['departments_ids'])){
@@ -1439,7 +1439,6 @@ if ($mode === 'add') {
         'u_info' => !empty([$department_data['user_id']]) ? fn_get_user_short_info($department_data['user_id']) : [],
     ]);
 
-    fn_print_die($_REQUEST);
 } elseif ($mode === 'manage_department'){
     list($departments, $search) = fn_get_departments($_REQUEST, Registry::get('settings.Appearance.admin_elements_per_page'), DESCR_SL);
     Tygh::$app['view']->assign('departments', $departments);

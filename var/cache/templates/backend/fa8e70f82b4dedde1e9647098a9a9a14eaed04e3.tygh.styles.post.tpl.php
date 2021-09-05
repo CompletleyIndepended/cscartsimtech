@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2021-09-05 10:35:09
+<?php /* Smarty version Smarty-3.1.21, created on 2021-09-05 10:56:09
          compiled from "C:\OpenServer\domains\cscart\design\backend\templates\addons\rus_payments\hooks\index\styles.post.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:8126025056134732d61d188-76734186%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:23881275661347819cccf58-20784461%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,15 +11,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'tygh',
     ),
   ),
-  'nocache_hash' => '8126025056134732d61d188-76734186',
+  'nocache_hash' => '23881275661347819cccf58-20784461',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21',
-  'unifunc' => 'content_6134732d620ec9_53712186',
+  'unifunc' => 'content_61347819cd1ad1_71074407',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_6134732d620ec9_53712186')) {function content_6134732d620ec9_53712186($_smarty_tpl) {?><?php if (!is_callable('smarty_function_style')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\function.style.php';
+<?php if ($_valid && !is_callable('content_61347819cd1ad1_71074407')) {function content_61347819cd1ad1_71074407($_smarty_tpl) {?><?php if (!is_callable('smarty_function_style')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\function.style.php';
 ?><?php echo smarty_function_style(array('src'=>"addons/rus_payments/styles.less"),$_smarty_tpl);?>
 
 <?php }} ?>

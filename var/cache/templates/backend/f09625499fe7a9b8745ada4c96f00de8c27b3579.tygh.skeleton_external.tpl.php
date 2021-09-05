@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2021-09-05 10:38:41
+<?php /* Smarty version Smarty-3.1.21, created on 2021-09-05 10:56:23
          compiled from "C:\OpenServer\domains\cscart\design\backend\templates\views\products\components\picker\skeleton_external.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:942295138613474018ba287-74973560%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:62533148561347827bd33c7-16134241%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,15 +11,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'tygh',
     ),
   ),
-  'nocache_hash' => '942295138613474018ba287-74973560',
+  'nocache_hash' => '62533148561347827bd33c7-16134241',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21',
-  'unifunc' => 'content_613474018d5116_04050297',
+  'unifunc' => 'content_61347827bd4d50_30824284',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_613474018d5116_04050297')) {function content_613474018d5116_04050297($_smarty_tpl) {?><div class="object-picker__skeleton-item object-picker__skeleton-products-image"></div>
+<?php if ($_valid && !is_callable('content_61347827bd4d50_30824284')) {function content_61347827bd4d50_30824284($_smarty_tpl) {?><div class="object-picker__skeleton-item object-picker__skeleton-products-image"></div>
 <div class="object-picker__skeleton-group object-picker__skeleton-products-main">
     <div class="object-picker__skeleton-item object-picker__skeleton-products-name"></div>
     <div class="object-picker__skeleton-item object-picker__skeleton-products-product-code"></div>

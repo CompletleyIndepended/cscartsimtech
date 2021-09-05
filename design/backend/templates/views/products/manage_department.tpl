@@ -138,7 +138,7 @@
 {/capture}
 
 {hook name="departments:manage_mainbox_params"}
-    {$page_title = "Отдел"}
+    {$page_title = "Отделы"}
     {$select_languages = true}
 {/hook}
 
