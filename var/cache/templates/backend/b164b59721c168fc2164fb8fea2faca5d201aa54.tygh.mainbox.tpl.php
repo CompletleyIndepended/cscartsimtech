@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2021-09-04 20:32:30
+<?php /* Smarty version Smarty-3.1.21, created on 2021-09-05 10:35:11
          compiled from "C:\OpenServer\domains\cscart\design\backend\templates\common\mainbox.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:8794611396133adae94a2f3-37043406%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:13258964346134732fb3f2f1-93957010%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'tygh',
     ),
   ),
-  'nocache_hash' => '8794611396133adae94a2f3-37043406',
+  'nocache_hash' => '13258964346134732fb3f2f1-93957010',
   'function' => 
   array (
   ),
@@ -59,9 +59,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21',
-  'unifunc' => 'content_6133adae9f31d5_71030117',
+  'unifunc' => 'content_6134732fc159f0_93033439',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_6133adae9f31d5_71030117')) {function content_6133adae9f31d5_71030117($_smarty_tpl) {?><?php if (!is_callable('smarty_block_inline_script')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.inline_script.php';
+<?php if ($_valid && !is_callable('content_6134732fc159f0_93033439')) {function content_6134732fc159f0_93033439($_smarty_tpl) {?><?php if (!is_callable('smarty_block_inline_script')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.inline_script.php';
 if (!is_callable('smarty_block_hook')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.hook.php';
 if (!is_callable('smarty_block_notes')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.notes.php';
 if (!is_callable('smarty_modifier_sanitize_html')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\modifier.sanitize_html.php';
