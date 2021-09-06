@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2021-09-06 10:47:37
+<?php /* Smarty version Smarty-3.1.21, created on 2021-09-06 21:32:05
          compiled from "C:\OpenServer\domains\cscart\design\backend\templates\components\bottom_panel\icons\bp-modes__item--build.svg" */ ?>
-<?php /*%%SmartyHeaderCode:9944135886135c799088589-47020102%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:32215473661365ea5caddf1-47149460%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,15 +11,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'backend',
     ),
   ),
-  'nocache_hash' => '9944135886135c799088589-47020102',
+  'nocache_hash' => '32215473661365ea5caddf1-47149460',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21',
-  'unifunc' => 'content_6135c7990a0ac1_25077368',
+  'unifunc' => 'content_61365ea5caf981_57022890',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_6135c7990a0ac1_25077368')) {function content_6135c7990a0ac1_25077368($_smarty_tpl) {?><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+<?php if ($_valid && !is_callable('content_61365ea5caf981_57022890')) {function content_61365ea5caf981_57022890($_smarty_tpl) {?><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
     class="bp-modes__item-icon">
     <path d="M5 8h22v10.75l-2-1.25V10H7v11h9.75l.25 2H5" />
     <path

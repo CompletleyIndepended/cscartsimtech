@@ -1,22 +1,20 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2021-09-06 12:23:20
+<?php /* Smarty version Smarty-3.1.21, created on 2021-09-06 21:32:12
          compiled from "C:\OpenServer\domains\cscart\design\themes\responsive\templates\views\products\departments.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:5205821466135cbea45ab54-63025538%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:194706273761365eac08d2a7-14867110%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'e7f72a9a5ea5cd56c0a8525896aa673b3f61ee26' => 
     array (
       0 => 'C:\\OpenServer\\domains\\cscart\\design\\themes\\responsive\\templates\\views\\products\\departments.tpl',
-      1 => 1630920197,
+      1 => 1630952785,
       2 => 'tygh',
     ),
   ),
-  'nocache_hash' => '5205821466135cbea45ab54-63025538',
+  'nocache_hash' => '194706273761365eac08d2a7-14867110',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.21',
-  'unifunc' => 'content_6135cbea4ca664_99470329',
   'variables' => 
   array (
     'runtime' => 0,
@@ -29,13 +27,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'department' => 0,
     'obj_prefix' => 0,
     'settings' => 0,
-    'u_id' => 0,
     'title' => 0,
     'auth' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.21',
+  'unifunc' => 'content_61365eac11d5f8_08913642',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_6135cbea4ca664_99470329')) {function content_6135cbea4ca664_99470329($_smarty_tpl) {?><?php if (!is_callable('smarty_function_script')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\function.script.php';
+<?php if ($_valid && !is_callable('content_61365eac11d5f8_08913642')) {function content_61365eac11d5f8_08913642($_smarty_tpl) {?><?php if (!is_callable('smarty_function_script')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\function.script.php';
 if (!is_callable('smarty_function_split')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\function.split.php';
 if (!is_callable('smarty_function_math')) include 'C:\\OpenServer\\domains\\cscart\\app\\lib\\vendor\\smarty\\smarty\\libs\\plugins\\function.math.php';
 if (!is_callable('smarty_function_set_id')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\function.set_id.php';
@@ -85,8 +84,7 @@ $_smarty_tpl->tpl_vars["obj_id_prefix"] = new Smarty_variable(((string)$_smarty_
 "><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['department']->value['department'], ENT_QUOTES, 'UTF-8');?>
 </a></bdi></div><div class="ty-grid-list__item-name"><bdi><a href="<?php echo htmlspecialchars(fn_url("products.department?user_id=".((string)$_smarty_tpl->tpl_vars['department']->value['user_id'])), ENT_QUOTES, 'UTF-8');?>
 " class="product-title" title="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['department']->value['user_id'], ENT_QUOTES, 'UTF-8');?>
-"><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['department']->value['user_id'], ENT_QUOTES, 'UTF-8');
-echo htmlspecialchars(fn_print_r($_smarty_tpl->tpl_vars['u_id']->value), ENT_QUOTES, 'UTF-8');?>
+"><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['department']->value['user_id'], ENT_QUOTES, 'UTF-8');?>
 </a></bdi></div></div><?php }?></div><?php }
 } ?>
     </div>
@@ -164,8 +162,7 @@ $_smarty_tpl->tpl_vars["obj_id_prefix"] = new Smarty_variable(((string)$_smarty_
 "><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['department']->value['department'], ENT_QUOTES, 'UTF-8');?>
 </a></bdi></div><div class="ty-grid-list__item-name"><bdi><a href="<?php echo htmlspecialchars(fn_url("products.department?user_id=".((string)$_smarty_tpl->tpl_vars['department']->value['user_id'])), ENT_QUOTES, 'UTF-8');?>
 " class="product-title" title="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['department']->value['user_id'], ENT_QUOTES, 'UTF-8');?>
-"><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['department']->value['user_id'], ENT_QUOTES, 'UTF-8');
-echo htmlspecialchars(fn_print_r($_smarty_tpl->tpl_vars['u_id']->value), ENT_QUOTES, 'UTF-8');?>
+"><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['department']->value['user_id'], ENT_QUOTES, 'UTF-8');?>
 </a></bdi></div></div><?php }?></div><?php }
 } ?>
     </div>

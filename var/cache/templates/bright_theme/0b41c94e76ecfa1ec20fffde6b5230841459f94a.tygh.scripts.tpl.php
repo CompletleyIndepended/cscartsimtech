@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2021-09-06 10:47:51
+<?php /* Smarty version Smarty-3.1.21, created on 2021-09-06 21:32:13
          compiled from "C:\OpenServer\domains\cscart\design\themes\responsive\templates\common\scripts.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:19227718966135c7a71f9d09-54824552%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:31472237961365eadcc9c53-69389590%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'tygh',
     ),
   ),
-  'nocache_hash' => '19227718966135c7a71f9d09-54824552',
+  'nocache_hash' => '31472237961365eadcc9c53-69389590',
   'function' => 
   array (
   ),
@@ -33,9 +33,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21',
-  'unifunc' => 'content_6135c7a733a055_82954979',
+  'unifunc' => 'content_61365eaddec793_19319576',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_6135c7a733a055_82954979')) {function content_6135c7a733a055_82954979($_smarty_tpl) {?><?php if (!is_callable('smarty_function_script')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\function.script.php';
+<?php if ($_valid && !is_callable('content_61365eaddec793_19319576')) {function content_61365eaddec793_19319576($_smarty_tpl) {?><?php if (!is_callable('smarty_function_script')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\function.script.php';
 if (!is_callable('smarty_block_scripts')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.scripts.php';
 if (!is_callable('smarty_block_hook')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.hook.php';
 if (!is_callable('smarty_function_set_id')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\function.set_id.php';

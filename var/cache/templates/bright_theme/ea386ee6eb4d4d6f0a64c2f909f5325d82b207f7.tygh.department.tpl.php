@@ -1,22 +1,20 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2021-09-06 11:51:58
+<?php /* Smarty version Smarty-3.1.21, created on 2021-09-06 21:33:10
          compiled from "C:\OpenServer\domains\cscart\design\themes\responsive\templates\views\products\department.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:13698545356135d2ac464fc6-39988167%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:127179039661365ee60f0c11-63825160%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'ea386ee6eb4d4d6f0a64c2f909f5325d82b207f7' => 
     array (
       0 => 'C:\\OpenServer\\domains\\cscart\\design\\themes\\responsive\\templates\\views\\products\\department.tpl',
-      1 => 1630918283,
+      1 => 1630952692,
       2 => 'tygh',
     ),
   ),
-  'nocache_hash' => '13698545356135d2ac464fc6-39988167',
+  'nocache_hash' => '127179039661365ee60f0c11-63825160',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.21',
-  'unifunc' => 'content_6135d2ac4659e3_38611824',
   'variables' => 
   array (
     'runtime' => 0,
@@ -30,8 +28,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'auth' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.21',
+  'unifunc' => 'content_61365ee6182152_50794129',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_6135d2ac4659e3_38611824')) {function content_6135d2ac4659e3_38611824($_smarty_tpl) {?><?php if (!is_callable('smarty_function_set_id')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\function.set_id.php';
+<?php if ($_valid && !is_callable('content_61365ee6182152_50794129')) {function content_61365ee6182152_50794129($_smarty_tpl) {?><?php if (!is_callable('smarty_function_set_id')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\function.set_id.php';
 ?><?php
 \Tygh\Languages\Helper::preloadLangVars(array('text_no_products','text_no_products'));
 ?>

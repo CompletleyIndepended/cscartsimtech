@@ -49,7 +49,7 @@
                                         <a href="{"products.department?user_id={$department.user_id}"|fn_url}" class="product-title" title="{$department.user_id}">
                                             {* {foreach } *}
                                             {$department.user_id}
-                                            {$u_id|fn_print_r}
+                                            {* {$u_id|fn_print_r} *}
                                         </a>    
                                     </bdi>
                                 </div>

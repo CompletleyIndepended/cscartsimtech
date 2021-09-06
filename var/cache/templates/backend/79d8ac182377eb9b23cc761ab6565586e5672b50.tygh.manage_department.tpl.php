@@ -1,22 +1,20 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2021-09-06 11:28:35
+<?php /* Smarty version Smarty-3.1.21, created on 2021-09-06 21:31:12
          compiled from "C:\OpenServer\domains\cscart\design\backend\templates\views\products\manage_department.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:5543813376135344be9c8c8-39561209%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:101981270061365e700bc7d9-48058862%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '79d8ac182377eb9b23cc761ab6565586e5672b50' => 
     array (
       0 => 'C:\\OpenServer\\domains\\cscart\\design\\backend\\templates\\views\\products\\manage_department.tpl',
-      1 => 1630916910,
+      1 => 1630952692,
       2 => 'tygh',
     ),
   ),
-  'nocache_hash' => '5543813376135344be9c8c8-39561209',
+  'nocache_hash' => '101981270061365e700bc7d9-48058862',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.21',
-  'unifunc' => 'content_6135344c01ef16_13097994',
   'variables' => 
   array (
     'config' => 0,
@@ -36,8 +34,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'select_languages' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.21',
+  'unifunc' => 'content_61365e7013efd8_59175685',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_6135344c01ef16_13097994')) {function content_6135344c01ef16_13097994($_smarty_tpl) {?><?php if (!is_callable('smarty_block_hook')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.hook.php';
+<?php if ($_valid && !is_callable('content_61365e7013efd8_59175685')) {function content_61365e7013efd8_59175685($_smarty_tpl) {?><?php if (!is_callable('smarty_block_hook')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.hook.php';
 ?><?php
 \Tygh\Languages\Helper::preloadLangVars(array('name','status','status','edit','delete','no_data','departments_for_manage_departments'));
 ?>
@@ -239,7 +239,7 @@ if (!empty($_capture_buffer)) {
 <?php $_smarty_tpl->smarty->_tag_stack[] = array('hook', array('name'=>"departments:manage_mainbox_params")); $_block_repeat=true; echo smarty_block_hook(array('name'=>"departments:manage_mainbox_params"), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>
 
     <?php ob_start();?><?php echo $_smarty_tpl->__("departments_for_manage_departments");?>
-<?php $_tmp1=ob_get_clean();?><?php $_smarty_tpl->tpl_vars['page_title'] = new Smarty_variable($_tmp1, null, 0);?>
+<?php $_tmp12=ob_get_clean();?><?php $_smarty_tpl->tpl_vars['page_title'] = new Smarty_variable($_tmp12, null, 0);?>
     <?php $_smarty_tpl->tpl_vars['select_languages'] = new Smarty_variable(true, null, 0);?>
 <?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_block_hook(array('name'=>"departments:manage_mainbox_params"), $_block_content, $_smarty_tpl, $_block_repeat);  } array_pop($_smarty_tpl->smarty->_tag_stack);?>
 

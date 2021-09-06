@@ -1,22 +1,20 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2021-09-06 11:01:30
+<?php /* Smarty version Smarty-3.1.21, created on 2021-09-06 21:32:07
          compiled from "C:\OpenServer\domains\cscart\design\themes\bright_theme\templates\blocks\my_account.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:13208455946135c79ab4ccd6-20242105%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2134615861365ea76a0d74-27842122%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '7eb1e0057b94c232b7c00acfcdccd9a0c6e003c7' => 
     array (
       0 => 'C:\\OpenServer\\domains\\cscart\\design\\themes\\bright_theme\\templates\\blocks\\my_account.tpl',
-      1 => 1630915158,
+      1 => 1630952692,
       2 => 'tygh',
     ),
   ),
-  'nocache_hash' => '13208455946135c79ab4ccd6-20242105',
+  'nocache_hash' => '2134615861365ea76a0d74-27842122',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.21',
-  'unifunc' => 'content_6135c79ac1b779_39008984',
   'variables' => 
   array (
     'runtime' => 0,
@@ -32,8 +30,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'return_current_url' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.21',
+  'unifunc' => 'content_61365ea779b278_78440327',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_6135c79ac1b779_39008984')) {function content_6135c79ac1b779_39008984($_smarty_tpl) {?><?php if (!is_callable('smarty_function_live_edit')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\function.live_edit.php';
+<?php if ($_valid && !is_callable('content_61365ea779b278_78440327')) {function content_61365ea779b278_78440327($_smarty_tpl) {?><?php if (!is_callable('smarty_function_live_edit')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\function.live_edit.php';
 if (!is_callable('smarty_block_hook')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.hook.php';
 if (!is_callable('smarty_modifier_count')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\modifier.count.php';
 if (!is_callable('smarty_function_set_id')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\function.set_id.php';

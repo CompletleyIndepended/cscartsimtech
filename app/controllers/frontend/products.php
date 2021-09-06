@@ -366,16 +366,14 @@ if ($mode == 'search') {
 
     $department_id = $departments['department_id'];
 
-        // 'LEFT JOIN ?:users ON ?:users.user_id = ?:departments_links.users_id AND ?:departments_descriptions.lang_code = ?s', $lang_code
-        $u_id = get_fn_ln();
-        fn_print_die($u_id);
     fn_add_breadcrumb(__("departments_for_collections"));
 
 } elseif ($mode === 'department') {
-
+    
     $department_data = [];
     $department_id = !empty($_REQUEST['department_id']) ? $_REQUEST['department_id'] : 0;
     $department_data = fn_get_department_data($department_id, CART_LANGUAGE);
+    
     
     // fn_print_die($department_data);
 
@@ -386,6 +384,7 @@ if ($mode == 'search') {
     Tygh::$app['view']->assign('department_data', $department_data);
 
     fn_add_breadcrumb(["Коллекции", $department_data['department']]);
+    fn_print_die($department_data);
 
     $params = $_REQUEST;
     $params['extend'] = ['description'];
@@ -419,6 +418,7 @@ if ($mode == 'search') {
     // Tygh::$app['view']->assign('products', $products);
     Tygh::$app['view']->assign('search', $search);
     Tygh::$app['view']->assign('selected_layout', $selected_layout);
+    // fn_print_die($department_data);
 }
 function fn_add_product_to_recently_viewed($product_id, $max_list_size = MAX_RECENTLY_VIEWED)
 {

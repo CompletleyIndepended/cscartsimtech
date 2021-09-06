@@ -1367,7 +1367,6 @@ function fn_update_product($product_data, $product_id = 0, $lang_code = CART_LAN
             if (empty($product_id)) {
                 $product_id = false;
             }
-            // fn_print_die($_data);
 
             //
             // Adding same product descriptions for all cart languages
@@ -4172,7 +4171,6 @@ function fn_update_collection($data, $collection_id, $lang_code = DESCR_SL)
     if (isset($data['timestamp'])) {
         $data['timestamp'] = fn_parse_date($data['timestamp']);
     }
-    // fn_print_die($data);
 
     if (!empty($collection_id)) {
         db_query("UPDATE ?:collections SET ?u WHERE collection_id = ?i", $data, $collection_id);
@@ -4243,7 +4241,6 @@ function fn_get_department_data($department_id = 0, $lang_code = CART_LANGUAGE)
             $department['users_ids'] = fn_department_get_links($department['department_id']);
         }
     }
-    // fn_print_die($department);
     return $department;
 }
 
@@ -4309,7 +4306,7 @@ function fn_get_departments($params = [], $items_per_page = 0, $lang_code = CART
         "WHERE 1 ?p ?p ?p",
         'department_id', implode(', ', $fields), $condition, $sorting, $limit
     );
-// fn_print_die($departments);
+
     $department_image_ids = array_keys($departments);
     $images = fn_get_image_pairs($department_image_ids, 'department', 'M', true, false, $lang_code);
 
@@ -4345,7 +4342,6 @@ function fn_update_department($data, $department_id, $lang_code = DESCR_SL)
 
     $users_ids = !empty($data['users_ids']) ? $data['users_ids'] : [];
     
-    // fn_print_die($users_ids);
     fn_department_delete_links($department_id);
     fn_department_add_users($department_id, $users_ids);
 
@@ -4371,7 +4367,6 @@ function fn_department_add_users($department_id, $users_ids){
     if(!empty($users_ids)){
         
         $users = explode(",", $users_ids[0]);
-        // fn_print_die($users);
 
         foreach($users as $users_id){
             db_query("REPLACE INTO ?:departments_links ?e", [
@@ -4383,7 +4378,6 @@ function fn_department_add_users($department_id, $users_ids){
 }
 
 function fn_department_get_links($department_id){
-    // fn_print_die($department_id);
     return !empty($department_id) ? db_get_fields('SELECT users_id FROM `?:departments_links` WHERE `department_id` = ?i', $department_id) : [];
     
 }
