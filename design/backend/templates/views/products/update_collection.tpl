@@ -77,11 +77,11 @@
 
         {include file="views/products/components/picker/picker.tpl"
         input_name="collection_data[product_ids][]"
-        item_ids=$collection_data[product_ids]
+        item_ids=$collection_data.product_ids
         multiple=true
         view_mode="external"
         select_group_class="btn-toolbar"
-        }   
+        }    
 
     </div>
 
