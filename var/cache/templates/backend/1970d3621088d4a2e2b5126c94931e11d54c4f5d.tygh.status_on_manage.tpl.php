@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2021-09-05 11:15:39
+<?php /* Smarty version Smarty-3.1.21, created on 2021-09-06 11:28:35
          compiled from "C:\OpenServer\domains\cscart\design\backend\templates\views\products\components\status_on_manage.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:83819100261347cab7dad37-39069185%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:15044733626135d13388eb61-02446253%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'tygh',
     ),
   ),
-  'nocache_hash' => '83819100261347cab7dad37-39069185',
+  'nocache_hash' => '15044733626135d13388eb61-02446253',
   'function' => 
   array (
   ),
@@ -47,9 +47,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21',
-  'unifunc' => 'content_61347cab8474d7_74294191',
+  'unifunc' => 'content_6135d1338fb755_14684923',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_61347cab8474d7_74294191')) {function content_61347cab8474d7_74294191($_smarty_tpl) {?><?php if (!is_callable('smarty_block_hook')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.hook.php';
+<?php if ($_valid && !is_callable('content_6135d1338fb755_14684923')) {function content_6135d1338fb755_14684923($_smarty_tpl) {?><?php if (!is_callable('smarty_block_hook')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.hook.php';
 if (!is_callable('smarty_function_script')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\function.script.php';
 ?><?php $_smarty_tpl->tpl_vars['items_status'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['items_status']->value)===null||$tmp==='' ? (fn_get_product_statuses($_smarty_tpl->tpl_vars['status']->value,$_smarty_tpl->tpl_vars['hidden']->value)) : $tmp), null, 0);?>
 <?php $_smarty_tpl->tpl_vars['statuses'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['statuses']->value)===null||$tmp==='' ? array() : $tmp), null, 0);?>
@@ -105,7 +105,7 @@ _wrap"<?php }?>
                 <?php if ($_smarty_tpl->tpl_vars['st_return_url']->value) {?>
                     <?php ob_start();
 echo htmlspecialchars(rawurlencode($_smarty_tpl->tpl_vars['st_return_url']->value), ENT_QUOTES, 'UTF-8');
-$_tmp3=ob_get_clean();?><?php $_smarty_tpl->tpl_vars['extra_params'] = new Smarty_variable(((string)$_smarty_tpl->tpl_vars['extra_params']->value)."&redirect_url=".$_tmp3, null, 0);?>
+$_tmp2=ob_get_clean();?><?php $_smarty_tpl->tpl_vars['extra_params'] = new Smarty_variable(((string)$_smarty_tpl->tpl_vars['extra_params']->value)."&redirect_url=".$_tmp2, null, 0);?>
                 <?php }?>
 
                 <?php  $_smarty_tpl->tpl_vars['status_name'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['status_name']->_loop = false;

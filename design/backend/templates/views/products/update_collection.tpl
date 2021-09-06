@@ -65,7 +65,7 @@
                 input_name="collection_data[user_id]" 
                 item_ids=$collection_data.user_id 
                 placement="right"
-                display="radio"
+                display="checkbox"
                 view_mode="single_button"
                 user_info = $u_info
                 }

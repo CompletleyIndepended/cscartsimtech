@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2021-09-05 11:57:56
+<?php /* Smarty version Smarty-3.1.21, created on 2021-09-06 10:47:50
          compiled from "c2ccbda5b49a918abafc4d15e4e96ac78f55bc5a" */ ?>
-<?php /*%%SmartyHeaderCode:2772471726134869481f814-23123909%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:10867141336135c7a6c21158-82525582%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,15 +11,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'string',
     ),
   ),
-  'nocache_hash' => '2772471726134869481f814-23123909',
+  'nocache_hash' => '10867141336135c7a6c21158-82525582',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21',
-  'unifunc' => 'content_61348694823526_74892272',
+  'unifunc' => 'content_6135c7a6c23666_44366174',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_61348694823526_74892272')) {function content_61348694823526_74892272($_smarty_tpl) {?><ul>
+<?php if ($_valid && !is_callable('content_6135c7a6c23666_44366174')) {function content_6135c7a6c23666_44366174($_smarty_tpl) {?><ul>
     <li>г. Москва, ул. 1-я Дубровская, д.1, офис 100</li>
     <li><bdi>8-800-000-00-00</bdi> (звонок бесплатный)</li>
     <li><bdi>Пн-Пт 9.00 - 18.00</bdi></li>

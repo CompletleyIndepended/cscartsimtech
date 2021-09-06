@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2021-09-05 11:57:49
+<?php /* Smarty version Smarty-3.1.21, created on 2021-09-06 10:47:46
          compiled from "C:\OpenServer\domains\cscart\design\themes\responsive\templates\addons\product_reviews\views\product_reviews\components\product_reviews_stars.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:19962339076134868db96af9-81250561%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:4400744566135c7a2d0c709-11793839%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'tygh',
     ),
   ),
-  'nocache_hash' => '19962339076134868db96af9-81250561',
+  'nocache_hash' => '4400744566135c7a2d0c709-11793839',
   'function' => 
   array (
   ),
@@ -36,9 +36,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21',
-  'unifunc' => 'content_6134868dd0b244_58832605',
+  'unifunc' => 'content_6135c7a2d6bab7_57095808',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_6134868dd0b244_58832605')) {function content_6134868dd0b244_58832605($_smarty_tpl) {?><?php if (!is_callable('smarty_function_set_id')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\function.set_id.php';
+<?php if ($_valid && !is_callable('content_6135c7a2d6bab7_57095808')) {function content_6135c7a2d6bab7_57095808($_smarty_tpl) {?><?php if (!is_callable('smarty_function_set_id')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\function.set_id.php';
 ?><?php
 \Tygh\Languages\Helper::preloadLangVars(array('product_reviews.product_is_rated_n_out_of_five_stars','product_reviews.show_rating','product_reviews.click_to_see_reviews','product_reviews.product_is_rated_n_out_of_five_stars','product_reviews.show_rating','product_reviews.click_to_see_reviews'));
 ?>
@@ -59,11 +59,11 @@ $_smarty_tpl->_capture_stack[0][] = array("template_content", null, null); ob_st
     <?php if ($_smarty_tpl->tpl_vars['link']->value) {?>
         <?php ob_start();
 echo $_smarty_tpl->__("product_reviews.show_rating");
-$_tmp10=ob_get_clean();?><?php $_smarty_tpl->tpl_vars['title'] = new Smarty_variable(((string)$_smarty_tpl->tpl_vars['title']->value).". ".$_tmp10.".", null, 0);?>
+$_tmp26=ob_get_clean();?><?php $_smarty_tpl->tpl_vars['title'] = new Smarty_variable(((string)$_smarty_tpl->tpl_vars['title']->value).". ".$_tmp26.".", null, 0);?>
     <?php } elseif ($_smarty_tpl->tpl_vars['button']->value) {?>
         <?php ob_start();
 echo $_smarty_tpl->__("product_reviews.click_to_see_reviews");
-$_tmp11=ob_get_clean();?><?php $_smarty_tpl->tpl_vars['title'] = new Smarty_variable(((string)$_smarty_tpl->tpl_vars['title']->value).". ".$_tmp11.".", null, 0);?>
+$_tmp27=ob_get_clean();?><?php $_smarty_tpl->tpl_vars['title'] = new Smarty_variable(((string)$_smarty_tpl->tpl_vars['title']->value).". ".$_tmp27.".", null, 0);?>
     <?php }?>
     <?php if ($_smarty_tpl->tpl_vars['link']->value===true) {?>
         <?php $_smarty_tpl->tpl_vars['link'] = new Smarty_variable("products.view?product_id=".((string)$_smarty_tpl->tpl_vars['product']->value['product_id'])."&selected_section=product_reviews#product_reviews", null, 0);?>
@@ -143,11 +143,11 @@ echo Smarty::$_smarty_vars['capture']['template_content'];
     <?php if ($_smarty_tpl->tpl_vars['link']->value) {?>
         <?php ob_start();
 echo $_smarty_tpl->__("product_reviews.show_rating");
-$_tmp12=ob_get_clean();?><?php $_smarty_tpl->tpl_vars['title'] = new Smarty_variable(((string)$_smarty_tpl->tpl_vars['title']->value).". ".$_tmp12.".", null, 0);?>
+$_tmp28=ob_get_clean();?><?php $_smarty_tpl->tpl_vars['title'] = new Smarty_variable(((string)$_smarty_tpl->tpl_vars['title']->value).". ".$_tmp28.".", null, 0);?>
     <?php } elseif ($_smarty_tpl->tpl_vars['button']->value) {?>
         <?php ob_start();
 echo $_smarty_tpl->__("product_reviews.click_to_see_reviews");
-$_tmp13=ob_get_clean();?><?php $_smarty_tpl->tpl_vars['title'] = new Smarty_variable(((string)$_smarty_tpl->tpl_vars['title']->value).". ".$_tmp13.".", null, 0);?>
+$_tmp29=ob_get_clean();?><?php $_smarty_tpl->tpl_vars['title'] = new Smarty_variable(((string)$_smarty_tpl->tpl_vars['title']->value).". ".$_tmp29.".", null, 0);?>
     <?php }?>
     <?php if ($_smarty_tpl->tpl_vars['link']->value===true) {?>
         <?php $_smarty_tpl->tpl_vars['link'] = new Smarty_variable("products.view?product_id=".((string)$_smarty_tpl->tpl_vars['product']->value['product_id'])."&selected_section=product_reviews#product_reviews", null, 0);?>

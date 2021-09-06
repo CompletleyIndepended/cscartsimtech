@@ -18,13 +18,6 @@
             </div>
         </div>
 
-        <div class="control-group">
-            <label for="elm_department_position" class="control-label">{__("position_short")}</label>
-            <div class="controls">
-                <input type="text" name="department_data[position]" id="elm_department_position" value="{$department_data.position|default:"0"}" size="3"/>
-            </div>
-        </div>
-
         <div class="control-group" id="banner_graphic">
             <label class="control-label">{__("image")}</label>
             <div class="controls">
@@ -38,14 +31,7 @@
                 }
             </div>
         </div>
-
-        <div class="control-group" id="department_text">
-            <label class="control-label" for="elm_department_description">{__("description")}:</label>
-            <div class="controls">
-                <textarea id="elm_department_description" name="department_data[description]" cols="35" rows="8" class="cm-wysiwyg input-large">{$department_data.description}</textarea>
-            </div>
-        </div>
-
+        
         <div class="control-group">
             <label class="control-label" for="elm_department_timestamp_{$id}">{__("creation_date")}</label>
             <div class="controls">
@@ -54,37 +40,39 @@
         </div>
 
         {include file="common/select_status.tpl" input_name="department_data[status]" id="elm_department_status" obj_id=$id obj=$department_data hidden=false}
-    
-        <div class="control-group">
-            <label class="control-label">{__("users")}</label>
+
+        {* Choose direct *}
+
+<div class="control-group">
+            <label class="control-label">{__("manager")}</label>
             <div class="controls">
-                {include file="pickers/users/picker.tpl" 
-                but_text=__("add_recipients_from_users") 
-                data_id="return_users" 
-                but_meta="btn" 
-                input_name="department_data[user_id]" 
-                item_ids=$department_data.user_id 
-                placement="right"
-                display="radio"
-                view_mode="single_button"
-                user_info = $u_info
+                {include
+                    view_mode="single_button"
+                    file="pickers/users/picker.tpl"
+                    but_text=__("add_recipients_from_users")
+                    data_id="department_users"
+                    but_meta="btn"
+                    input_name="department_data[user_id]"
+                    item_ids=$department_data.user_id 
+                    display = "radio"
+                    user_info=$u_info
                 }
-                <p class="muted description">
-                    {__("tt_addons_newsletters_views_newsletters_update_users")}
-                </p>
             </div>
         </div>
 
-        {include file="views/products/components/picker/picker.tpl"
-        input_name="department_data[product_ids][]"
-        item_ids=$department_data.product_ids
-        multiple=true
-        view_mode="external"
-        select_group_class="btn-toolbar"
-        }   
-
-    </div>
-
+        <div class="control-group">
+            <label class="control-label">{__("staffers")}</label>
+            <div class="controls">
+                {include
+                    file="pickers/users/picker.tpl"
+                    but_text= __("add_staffs")
+                    data_id="department_users"
+                    but_meta="btn"
+                    input_name="department_data[users_ids][]"
+                    item_ids=$department_data.users_ids
+                }
+            </div>
+        </div>
     {* Save function *}
 
     {capture name="buttons"}

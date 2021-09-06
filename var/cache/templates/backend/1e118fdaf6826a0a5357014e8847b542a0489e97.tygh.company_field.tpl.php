@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2021-09-05 11:14:38
+<?php /* Smarty version Smarty-3.1.21, created on 2021-09-06 17:14:53
          compiled from "C:\OpenServer\domains\cscart\design\backend\templates\views\companies\components\company_field.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:207723431761347c6e519d33-67238334%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:503449986136225dab71e6-02460947%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'tygh',
     ),
   ),
-  'nocache_hash' => '207723431761347c6e519d33-67238334',
+  'nocache_hash' => '503449986136225dab71e6-02460947',
   'function' => 
   array (
   ),
@@ -34,9 +34,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21',
-  'unifunc' => 'content_61347c6e5797d8_36569400',
+  'unifunc' => 'content_6136225db184d5_64148407',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_61347c6e5797d8_36569400')) {function content_61347c6e5797d8_36569400($_smarty_tpl) {?><?php
+<?php if ($_valid && !is_callable('content_6136225db184d5_64148407')) {function content_6136225db184d5_64148407($_smarty_tpl) {?><?php
 \Tygh\Languages\Helper::preloadLangVars(array('owner_company'));
 ?>
 <?php $_smarty_tpl->tpl_vars['required'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['required']->value)===null||$tmp==='' ? false : $tmp), null, 0);?>

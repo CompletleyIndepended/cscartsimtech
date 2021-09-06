@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2021-09-05 11:28:02
+<?php /* Smarty version Smarty-3.1.21, created on 2021-09-06 17:14:35
          compiled from "C:\OpenServer\domains\cscart\design\backend\templates\views\profiles\manage.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:164016472161347f92711b14-17835175%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2170802236136224bd85ef0-75267869%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'tygh',
     ),
   ),
-  'nocache_hash' => '164016472161347f92711b14-17835175',
+  'nocache_hash' => '2170802236136224bd85ef0-75267869',
   'function' => 
   array (
   ),
@@ -46,9 +46,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21',
-  'unifunc' => 'content_61347f92a653d3_59621529',
+  'unifunc' => 'content_6136224c3278a5_04939548',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_61347f92a653d3_59621529')) {function content_61347f92a653d3_59621529($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_enum')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\modifier.enum.php';
+<?php if ($_valid && !is_callable('content_6136224c3278a5_04939548')) {function content_6136224c3278a5_04939548($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_enum')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\modifier.enum.php';
 if (!is_callable('smarty_block_hook')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.hook.php';
 if (!is_callable('smarty_modifier_date_format')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\modifier.date_format.php';
 if (!is_callable('smarty_modifier_format_price')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\modifier.format_price.php';

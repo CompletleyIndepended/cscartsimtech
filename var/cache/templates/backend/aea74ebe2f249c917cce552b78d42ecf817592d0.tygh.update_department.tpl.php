@@ -1,22 +1,22 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2021-09-05 11:19:29
+<?php /* Smarty version Smarty-3.1.21, created on 2021-09-06 10:38:25
          compiled from "C:\OpenServer\domains\cscart\design\backend\templates\views\products\update_department.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:141814630161347825738ad9-10502534%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:13637010406135320dbbd4d4-09293517%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'aea74ebe2f249c917cce552b78d42ecf817592d0' => 
     array (
       0 => 'C:\\OpenServer\\domains\\cscart\\design\\backend\\templates\\views\\products\\update_department.tpl',
-      1 => 1630829961,
+      1 => 1630913900,
       2 => 'tygh',
     ),
   ),
-  'nocache_hash' => '141814630161347825738ad9-10502534',
+  'nocache_hash' => '13637010406135320dbbd4d4-09293517',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.21',
-  'unifunc' => 'content_613478257ba5a5_45896532',
+  'unifunc' => 'content_6135320dbf09f7_69037034',
   'variables' => 
   array (
     'department_data' => 0,
@@ -31,8 +31,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_613478257ba5a5_45896532')) {function content_613478257ba5a5_45896532($_smarty_tpl) {?><?php
-\Tygh\Languages\Helper::preloadLangVars(array('name','position_short','image','description','creation_date','users','add_recipients_from_users','tt_addons_newsletters_views_newsletters_update_users','delete'));
+<?php if ($_valid && !is_callable('content_6135320dbf09f7_69037034')) {function content_6135320dbf09f7_69037034($_smarty_tpl) {?><?php
+\Tygh\Languages\Helper::preloadLangVars(array('name','image','creation_date','manager','add_recipients_from_users','staffers','add_staffs','delete'));
 ?>
 <?php if ($_smarty_tpl->tpl_vars['department_data']->value) {?>
     <?php $_smarty_tpl->tpl_vars["id"] = new Smarty_variable($_smarty_tpl->tpl_vars['department_data']->value['department_id'], null, 0);?>
@@ -58,15 +58,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             </div>
         </div>
 
-        <div class="control-group">
-            <label for="elm_department_position" class="control-label"><?php echo $_smarty_tpl->__("position_short");?>
-</label>
-            <div class="controls">
-                <input type="text" name="department_data[position]" id="elm_department_position" value="<?php echo htmlspecialchars((($tmp = @$_smarty_tpl->tpl_vars['department_data']->value['position'])===null||$tmp==='' ? "0" : $tmp), ENT_QUOTES, 'UTF-8');?>
-" size="3"/>
-            </div>
-        </div>
-
         <div class="control-group" id="banner_graphic">
             <label class="control-label"><?php echo $_smarty_tpl->__("image");?>
 </label>
@@ -75,16 +66,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
             </div>
         </div>
-
-        <div class="control-group" id="department_text">
-            <label class="control-label" for="elm_department_description"><?php echo $_smarty_tpl->__("description");?>
-:</label>
-            <div class="controls">
-                <textarea id="elm_department_description" name="department_data[description]" cols="35" rows="8" class="cm-wysiwyg input-large"><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['department_data']->value['description'], ENT_QUOTES, 'UTF-8');?>
-</textarea>
-            </div>
-        </div>
-
+        
         <div class="control-group">
             <label class="control-label" for="elm_department_timestamp_<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['id']->value, ENT_QUOTES, 'UTF-8');?>
 "><?php echo $_smarty_tpl->__("creation_date");?>
@@ -97,25 +79,26 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
         <?php echo $_smarty_tpl->getSubTemplate ("common/select_status.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('input_name'=>"department_data[status]",'id'=>"elm_department_status",'obj_id'=>$_smarty_tpl->tpl_vars['id']->value,'obj'=>$_smarty_tpl->tpl_vars['department_data']->value,'hidden'=>false), 0);?>
 
-    
-        <div class="control-group">
-            <label class="control-label"><?php echo $_smarty_tpl->__("users");?>
+
+        
+
+<div class="control-group">
+            <label class="control-label"><?php echo $_smarty_tpl->__("manager");?>
 </label>
             <div class="controls">
-                <?php echo $_smarty_tpl->getSubTemplate ("pickers/users/picker.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('but_text'=>$_smarty_tpl->__("add_recipients_from_users"),'data_id'=>"return_users",'but_meta'=>"btn",'input_name'=>"department_data[user_id]",'item_ids'=>$_smarty_tpl->tpl_vars['department_data']->value['user_id'],'placement'=>"right",'display'=>"radio",'view_mode'=>"single_button",'user_info'=>$_smarty_tpl->tpl_vars['u_info']->value), 0);?>
+                <?php echo $_smarty_tpl->getSubTemplate ("pickers/users/picker.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('view_mode'=>"single_button",'but_text'=>$_smarty_tpl->__("add_recipients_from_users"),'data_id'=>"department_users",'but_meta'=>"btn",'input_name'=>"department_data[user_id]",'item_ids'=>$_smarty_tpl->tpl_vars['department_data']->value['user_id'],'display'=>"radio",'user_info'=>$_smarty_tpl->tpl_vars['u_info']->value), 0);?>
 
-                <p class="muted description">
-                    <?php echo $_smarty_tpl->__("tt_addons_newsletters_views_newsletters_update_users");?>
-
-                </p>
             </div>
         </div>
 
-        <?php echo $_smarty_tpl->getSubTemplate ("views/products/components/picker/picker.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('input_name'=>"department_data[product_ids][]",'item_ids'=>$_smarty_tpl->tpl_vars['department_data']->value['product_ids'],'multiple'=>true,'view_mode'=>"external",'select_group_class'=>"btn-toolbar"), 0);?>
-   
+        <div class="control-group">
+            <label class="control-label"><?php echo $_smarty_tpl->__("staffers");?>
+</label>
+            <div class="controls">
+                <?php echo $_smarty_tpl->getSubTemplate ("pickers/users/picker.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('but_text'=>$_smarty_tpl->__("add_staffs"),'data_id'=>"department_users",'but_meta'=>"btn",'input_name'=>"department_data[users_ids][]",'item_ids'=>$_smarty_tpl->tpl_vars['department_data']->value['users_ids']), 0);?>
 
-    </div>
-
+            </div>
+        </div>
     
 
     <?php $_smarty_tpl->_capture_stack[0][] = array("buttons", null, null); ob_start(); ?>

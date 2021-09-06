@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2021-09-05 11:28:03
+<?php /* Smarty version Smarty-3.1.21, created on 2021-09-06 17:14:37
          compiled from "C:\OpenServer\domains\cscart\design\backend\templates\addons\reward_points\hooks\profiles\list_extra_links.post.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:32193574661347f93b6f9b0-64453401%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:7203904366136224d1b8f33-81665219%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'tygh',
     ),
   ),
-  'nocache_hash' => '32193574661347f93b6f9b0-64453401',
+  'nocache_hash' => '7203904366136224d1b8f33-81665219',
   'function' => 
   array (
   ),
@@ -21,9 +21,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21',
-  'unifunc' => 'content_61347f93bab368_34762825',
+  'unifunc' => 'content_6136224d1e26e5_74380584',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_61347f93bab368_34762825')) {function content_61347f93bab368_34762825($_smarty_tpl) {?><?php
+<?php if ($_valid && !is_callable('content_6136224d1e26e5_74380584')) {function content_6136224d1e26e5_74380584($_smarty_tpl) {?><?php
 \Tygh\Languages\Helper::preloadLangVars(array('points'));
 ?>
 <?php if ($_smarty_tpl->tpl_vars['user']->value['user_type']=="C"&&fn_check_permissions("reward_points","userlog","admin","GET")) {?>

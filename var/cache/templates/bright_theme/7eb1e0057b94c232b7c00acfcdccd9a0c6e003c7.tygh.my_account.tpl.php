@@ -1,20 +1,22 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2021-09-05 11:57:31
+<?php /* Smarty version Smarty-3.1.21, created on 2021-09-06 11:01:30
          compiled from "C:\OpenServer\domains\cscart\design\themes\bright_theme\templates\blocks\my_account.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1783143726134867b40b8c7-89486109%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:13208455946135c79ab4ccd6-20242105%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '7eb1e0057b94c232b7c00acfcdccd9a0c6e003c7' => 
     array (
       0 => 'C:\\OpenServer\\domains\\cscart\\design\\themes\\bright_theme\\templates\\blocks\\my_account.tpl',
-      1 => 1630747199,
+      1 => 1630915158,
       2 => 'tygh',
     ),
   ),
-  'nocache_hash' => '1783143726134867b40b8c7-89486109',
+  'nocache_hash' => '13208455946135c79ab4ccd6-20242105',
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.21',
+  'unifunc' => 'content_6135c79ac1b779_39008984',
   'variables' => 
   array (
     'runtime' => 0,
@@ -30,15 +32,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'return_current_url' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.21',
-  'unifunc' => 'content_6134867b6113f5_64212921',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_6134867b6113f5_64212921')) {function content_6134867b6113f5_64212921($_smarty_tpl) {?><?php if (!is_callable('smarty_function_live_edit')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\function.live_edit.php';
+<?php if ($_valid && !is_callable('content_6135c79ac1b779_39008984')) {function content_6135c79ac1b779_39008984($_smarty_tpl) {?><?php if (!is_callable('smarty_function_live_edit')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\function.live_edit.php';
 if (!is_callable('smarty_block_hook')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.hook.php';
 if (!is_callable('smarty_modifier_count')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\modifier.count.php';
 if (!is_callable('smarty_function_set_id')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\function.set_id.php';
 ?><?php
-\Tygh\Languages\Helper::preloadLangVars(array('profile_details','downloads','orders','view_comparison_list','track_my_order','track_my_order','order_id','email','go','go_to_admin_panel','sign_out','sign_in','register','sign_in','profile_details','downloads','orders','view_comparison_list','track_my_order','track_my_order','order_id','email','go','go_to_admin_panel','sign_out','sign_in','register','sign_in'));
+\Tygh\Languages\Helper::preloadLangVars(array('profile_details','downloads','collections_in_my_account','departments_in_my_account','orders','view_comparison_list','track_my_order','track_my_order','order_id','email','go','go_to_admin_panel','sign_out','sign_in','register','sign_in','profile_details','downloads','collections_in_my_account','departments_in_my_account','orders','view_comparison_list','track_my_order','track_my_order','order_id','email','go','go_to_admin_panel','sign_out','sign_in','register','sign_in'));
 ?>
 <?php if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design']=="Y"&&(defined('AREA') ? constant('AREA') : null)=="C") {
 $_smarty_tpl->_capture_stack[0][] = array("template_content", null, null); ob_start(); ?>
@@ -98,7 +98,12 @@ if (!empty($_capture_buffer)) {
 </a></li>
                 <?php }?>
                 <li class="ty-account-info__item ty-dropdown-box__item"><a class="ty-account-info__a underlined" href="<?php echo htmlspecialchars(fn_url("products.collections"), ENT_QUOTES, 'UTF-8');?>
-" rel="nofollow">Коллекции</a></li>
+" rel="nofollow"><?php echo $_smarty_tpl->__("collections_in_my_account");?>
+</a></li>
+                <li class="ty-account-info__item ty-dropdown-box__item"><a class="ty-account-info__a underlined" href="<?php echo htmlspecialchars(fn_url("products.departments"), ENT_QUOTES, 'UTF-8');?>
+" rel="nofollow"><?php echo $_smarty_tpl->__("departments_in_my_account");?>
+</a></li>
+
             <?php } elseif ($_smarty_tpl->tpl_vars['user_data']->value['firstname']||$_smarty_tpl->tpl_vars['user_data']->value['lastname']) {?>
                 <li class="ty-account-info__item  ty-dropdown-box__item ty-account-info__name"><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['user_data']->value['firstname'], ENT_QUOTES, 'UTF-8');?>
  <?php echo htmlspecialchars($_smarty_tpl->tpl_vars['user_data']->value['lastname'], ENT_QUOTES, 'UTF-8');?>
@@ -254,7 +259,12 @@ if (!empty($_capture_buffer)) {
 </a></li>
                 <?php }?>
                 <li class="ty-account-info__item ty-dropdown-box__item"><a class="ty-account-info__a underlined" href="<?php echo htmlspecialchars(fn_url("products.collections"), ENT_QUOTES, 'UTF-8');?>
-" rel="nofollow">Коллекции</a></li>
+" rel="nofollow"><?php echo $_smarty_tpl->__("collections_in_my_account");?>
+</a></li>
+                <li class="ty-account-info__item ty-dropdown-box__item"><a class="ty-account-info__a underlined" href="<?php echo htmlspecialchars(fn_url("products.departments"), ENT_QUOTES, 'UTF-8');?>
+" rel="nofollow"><?php echo $_smarty_tpl->__("departments_in_my_account");?>
+</a></li>
+
             <?php } elseif ($_smarty_tpl->tpl_vars['user_data']->value['firstname']||$_smarty_tpl->tpl_vars['user_data']->value['lastname']) {?>
                 <li class="ty-account-info__item  ty-dropdown-box__item ty-account-info__name"><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['user_data']->value['firstname'], ENT_QUOTES, 'UTF-8');?>
  <?php echo htmlspecialchars($_smarty_tpl->tpl_vars['user_data']->value['lastname'], ENT_QUOTES, 'UTF-8');?>

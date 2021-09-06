@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2021-09-05 11:57:22
+<?php /* Smarty version Smarty-3.1.21, created on 2021-09-06 10:47:32
          compiled from "C:\OpenServer\domains\cscart\design\themes\responsive\templates\index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:197874901061348672ac9311-50059999%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:6565435516135c794d35de9-41092448%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'tygh',
     ),
   ),
-  'nocache_hash' => '197874901061348672ac9311-50059999',
+  'nocache_hash' => '6565435516135c794d35de9-41092448',
   'function' => 
   array (
   ),
@@ -33,9 +33,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21',
-  'unifunc' => 'content_61348672cc9468_06493346',
+  'unifunc' => 'content_6135c794e2fc47_78026801',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_61348672cc9468_06493346')) {function content_61348672cc9468_06493346($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_enum')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\modifier.enum.php';
+<?php if ($_valid && !is_callable('content_6135c794e2fc47_78026801')) {function content_6135c794e2fc47_78026801($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_enum')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\modifier.enum.php';
 if (!is_callable('smarty_block_hook')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\block.hook.php';
 if (!is_callable('smarty_modifier_count')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\modifier.count.php';
 if (!is_callable('smarty_function_render_location')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\function.render_location.php';

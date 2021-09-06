@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.21, created on 2021-09-05 11:57:55
+<?php /* Smarty version Smarty-3.1.21, created on 2021-09-06 10:47:50
          compiled from "C:\OpenServer\domains\cscart\design\themes\responsive\templates\blocks\smarty_block.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:15936982161348693b13bf4-33340220%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:5344150996135c7a6596808-83681613%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'tygh',
     ),
   ),
-  'nocache_hash' => '15936982161348693b13bf4-33340220',
+  'nocache_hash' => '5344150996135c7a6596808-83681613',
   'function' => 
   array (
   ),
@@ -25,9 +25,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21',
-  'unifunc' => 'content_61348693b9fb51_86921444',
+  'unifunc' => 'content_6135c7a65b7c93_33597639',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_61348693b9fb51_86921444')) {function content_61348693b9fb51_86921444($_smarty_tpl) {?><?php if (!is_callable('smarty_function_live_edit')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\function.live_edit.php';
+<?php if ($_valid && !is_callable('content_6135c7a65b7c93_33597639')) {function content_6135c7a65b7c93_33597639($_smarty_tpl) {?><?php if (!is_callable('smarty_function_live_edit')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\function.live_edit.php';
 if (!is_callable('smarty_function_eval_string')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\function.eval_string.php';
 if (!is_callable('smarty_function_set_id')) include 'C:/OpenServer/domains/cscart/app/functions/smarty_plugins\\function.set_id.php';
 ?><?php if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design']=="Y"&&(defined('AREA') ? constant('AREA') : null)=="C") {

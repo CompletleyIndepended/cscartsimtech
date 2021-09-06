@@ -1367,6 +1367,7 @@ function fn_update_product($product_data, $product_id = 0, $lang_code = CART_LAN
             if (empty($product_id)) {
                 $product_id = false;
             }
+            // fn_print_die($_data);
 
             //
             // Adding same product descriptions for all cart languages
@@ -4161,7 +4162,9 @@ function fn_get_collections($params = [], $items_per_page = 0, $lang_code = CART
        $collections[$collection_id]['main_pair'] = !empty($images[$collection_id]) ? reset($images[$collection_id]) : array();
     }
 
+    
     return array($collections, $params);
+    
 }
 
 function fn_update_collection($data, $collection_id, $lang_code = DESCR_SL)
@@ -4169,6 +4172,7 @@ function fn_update_collection($data, $collection_id, $lang_code = DESCR_SL)
     if (isset($data['timestamp'])) {
         $data['timestamp'] = fn_parse_date($data['timestamp']);
     }
+    // fn_print_die($data);
 
     if (!empty($collection_id)) {
         db_query("UPDATE ?:collections SET ?u WHERE collection_id = ?i", $data, $collection_id);
@@ -4187,13 +4191,11 @@ function fn_update_collection($data, $collection_id, $lang_code = DESCR_SL)
         fn_attach_image_pairs('collection', 'collection', $collection_id, $lang_code);
     }
 
-
     $product_ids = !empty($data['product_ids']) ? $data['product_ids'] : [];
 
     fn_collection_delete_links($collection_id);
     fn_collection_add_links($collection_id, $product_ids);
 
-// fn_print_die($_REQUEST);
     return $collection_id;
 }
 
@@ -4238,9 +4240,10 @@ function fn_get_department_data($department_id = 0, $lang_code = CART_LANGUAGE)
 
         if(!empty($departments)){
             $department = reset($departments);
-            $department['product_ids'] = fn_department_get_links($department['department_id']);
+            $department['users_ids'] = fn_department_get_links($department['department_id']);
         }
     }
+    // fn_print_die($department);
     return $department;
 }
 
@@ -4258,7 +4261,6 @@ function fn_get_departments($params = [], $items_per_page = 0, $lang_code = CART
     }
 
     $sortings = array(
-        'position' => '?:departments.position',
         'timestamp' => '?:departments.timestamp',
         'name' => '?:departments_descriptions.department',
         'status' => '?:departments.status',
@@ -4274,11 +4276,7 @@ function fn_get_departments($params = [], $items_per_page = 0, $lang_code = CART
 
     if (!empty($params['item_ids'])) {
         $condition .= db_quote(' AND ?:departments.department_id IN (?n)', explode(',', $params['item_ids']));
-    }
-
-    if (!empty($params['department_id'])) {
-        $condition .= db_quote(' AND ?:departments.department_id = ?i', $params['department_id']);
-    }
+    }  
 
     if (!empty($params['user_id'])) {
         $condition .= db_quote(' AND ?:departments.user_id = ?i', $params['user_id']);
@@ -4286,6 +4284,10 @@ function fn_get_departments($params = [], $items_per_page = 0, $lang_code = CART
 
     if (!empty($params['status'])) {
         $condition .= db_quote(' AND ?:departments.status = ?s', $params['status']);
+    }
+
+    if (!empty($params['item_ids'])) {
+        $condition .= db_quote(' AND ?:departments.department_id IN (?n)', explode(',', $params['item_ids']));
     }
 
     $fields = array (
@@ -4307,17 +4309,13 @@ function fn_get_departments($params = [], $items_per_page = 0, $lang_code = CART
         "WHERE 1 ?p ?p ?p",
         'department_id', implode(', ', $fields), $condition, $sorting, $limit
     );
-
+// fn_print_die($departments);
     $department_image_ids = array_keys($departments);
     $images = fn_get_image_pairs($department_image_ids, 'department', 'M', true, false, $lang_code);
 
     foreach ($departments as $department_id => $department) {
        $departments[$department_id]['main_pair'] = !empty($images[$department_id]) ? reset($images[$department_id]) : array();
     }
-    // fn_print_die($departments[$department_id]['main_pair']['icon']['image_path']);
-    db_query("INSERT INTO ?:departments_descriptions ?e",[
-        'logo_img' => $departments[$department_id]['main_pair']['icon']['image_path']
-    ]);
 
     return array($departments, $params);
 }
@@ -4345,13 +4343,13 @@ function fn_update_department($data, $department_id, $lang_code = DESCR_SL)
         fn_attach_image_pairs('department', 'department', $department_id, $lang_code);
     }
 
-
-    $product_ids = !empty($data['product_ids']) ? $data['product_ids'] : [];
-
+    $users_ids = !empty($data['users_ids']) ? $data['users_ids'] : [];
+    
+    // fn_print_die($users_ids);
     fn_department_delete_links($department_id);
-    fn_department_add_links($department_id, $product_ids);
+    fn_department_add_users($department_id, $users_ids);
 
-// fn_print_die($_REQUEST);
+    
     return $department_id;
 }
 
@@ -4368,18 +4366,31 @@ function fn_department_delete_links($department_id){
     db_query("DELETE FROM ?:departments_links WHERE department_id = ?i", $department_id);
 }
 
-function fn_department_add_links($department_id, $product_ids){
+function fn_department_add_users($department_id, $users_ids){
 
-    if(!empty($product_ids)){
-        foreach($product_ids as $product_id){
+    if(!empty($users_ids)){
+        
+        $users = explode(",", $users_ids[0]);
+        // fn_print_die($users);
+
+        foreach($users as $users_id){
             db_query("REPLACE INTO ?:departments_links ?e", [
-                'product_id' => $product_id,
+                'users_id' => $users_id,
                 'department_id' => $department_id,
             ]);
-        }
+        }        
     }
 }
 
 function fn_department_get_links($department_id){
-    return !empty($department_id) ? db_get_fields('SELECT product_id FROM `?:departments_links` WHERE `department_id` = ?i', $department_id) : [];
+    // fn_print_die($department_id);
+    return !empty($department_id) ? db_get_fields('SELECT users_id FROM `?:departments_links` WHERE `department_id` = ?i', $department_id) : [];
+    
 }
+
+// function get_fn_ln ($lang_code){
+//     return db_quote('LEFT JOIN ?:users ON ?:users.user_id = ?:departments_links.users_id AND ?:departments_descriptions.lang_code = ?s', $lang_code);
+// }
+
+
+

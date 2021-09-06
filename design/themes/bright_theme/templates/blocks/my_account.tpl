@@ -29,7 +29,9 @@
                 {if $settings.General.enable_edp == "Y"}
                 <li class="ty-account-info__item ty-dropdown-box__item"><a class="ty-account-info__a underlined" href="{"orders.downloads"|fn_url}" rel="nofollow">{__("downloads")}</a></li>
                 {/if}
-                <li class="ty-account-info__item ty-dropdown-box__item"><a class="ty-account-info__a underlined" href="{"products.collections"|fn_url}" rel="nofollow">Коллекции</a></li>
+                <li class="ty-account-info__item ty-dropdown-box__item"><a class="ty-account-info__a underlined" href="{"products.collections"|fn_url}" rel="nofollow">{__("collections_in_my_account")}</a></li>
+                <li class="ty-account-info__item ty-dropdown-box__item"><a class="ty-account-info__a underlined" href="{"products.departments"|fn_url}" rel="nofollow">{__("departments_in_my_account")}</a></li>
+
             {elseif $user_data.firstname || $user_data.lastname}
                 <li class="ty-account-info__item  ty-dropdown-box__item ty-account-info__name">{$user_data.firstname} {$user_data.lastname}</li>
             {elseif $user_data.email}
