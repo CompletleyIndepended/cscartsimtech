@@ -4283,10 +4283,6 @@ function fn_get_departments($params = [], $items_per_page = 0, $lang_code = CART
         $condition .= db_quote(' AND ?:departments.status = ?s', $params['status']);
     }
 
-    if (!empty($params['item_ids'])) {
-        $condition .= db_quote(' AND ?:departments.department_id IN (?n)', explode(',', $params['item_ids']));
-    }
-
     $fields = array (
         '?:departments.*',
         '?:departments_descriptions.department',
